@@ -1,5 +1,5 @@
 import { useState } from "react";
-import avatar from "/app/assets/man.png";
+import avatar from "/app/assets/avatar.png";
 
 const AvailableButton = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -17,7 +17,7 @@ const AvailableButton = () => {
         setStatusText("Available for work");
       }}
     >
-      <img src={avatar} alt="avatar" className="py-2 mx-2" />
+      <img src={avatar} alt="avatar" className="w-8 h-auto py-2 mx-2" />
       <span
         className={`text-center text-sm font-medium ${
           isHovered ? "text-green-600" : ""
