@@ -1,9 +1,9 @@
 import React from "react";
 
-const Placeholder = ({ sqW, sqH }) => {
+const Placeholder = ({ sqW, sqH, style }) => {
   return (
     <div
-      className={`flex bg-gray-200 bg-[length:100%_100%,100%_100%] bg-no-repeat justify-center items-center text-gray-400 mx-2 font-light overflow-hidden`}
+      className={`flex bg-gray-200 bg-[length:100%_100%,100%_100%] bg-no-repeat justify-center items-center text-gray-400 mx-2 font-light overflow-hidden ${style}`}
       style={{
         minWidth: 10,
         minHeight: 10,

@@ -5,10 +5,10 @@ const ContactButton = ({ variant, label }) => {
 
   return (
     <div
-      className={`flex justify-center items-center rounded-xl px-4 py-1 text-sm min-w-[120px] h-11 hover:cursor-pointer bg-gradient-to-b ${
+      className={`flex justify-center items-center rounded-xl px-4 pb-1 pt-[.3rem] text-sm min-w-[120px] h-11 hover:cursor-pointer bg-gradient-to-b shadow-md font-normal font-rubik ${
         variant && variant === "outlined"
-          ? "border border-[#1f7bff] text-[#1f7bff] bg-white/[.03]"
-          : "from-[#448ffe] to-[#1f7bff] font-medium text-white"
+          ? "border border-[#1f7bff] text-[#1f7bff] bg-white/[.03] hover:bg-white/70"
+          : "from-[#448ffe] to-[#1f7bff] font-normal text-white"
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

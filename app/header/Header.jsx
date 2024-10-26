@@ -26,7 +26,7 @@ const Header = () => {
               return (
                 <a
                   key={index}
-                  className="p-2 mx-4 my-2 font-light text-gray-900 hover:underline underline-offset-8 decoration-0 hover:cursor-pointer"
+                  className="py-2 px-1 mx-4 my-2 font-light text-[#000e23] hover:underline underline-offset-8 decoration-0 decoration-[#439051] hover:cursor-pointer "
                 >
                   {item.label}
                 </a>

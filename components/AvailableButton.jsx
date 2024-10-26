@@ -1,5 +1,5 @@
 import { useState } from "react";
-import avatar from "/app/assets/avatar.png";
+import avatar from "/app/assets/icons/avatar.png";
 
 const AvailableButton = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -7,10 +7,12 @@ const AvailableButton = () => {
 
   return (
     <div
-      className="relative flex items-center min-w-[181px] rounded-xl ps-1 pe-3 py-4 h-11 mr-3 bg-[#f0f0f0] hover:cursor-pointer transition-transform hover:ease-in"
+      className={`relative flex items-center min-w-[181px] rounded-xl ps-1 pe-3 py-4 h-11 mr-3 bg-[#f0f0f0] hover:cursor-pointer transition-transform hover:ease-in ${
+        isHovered ? "shadow" : "shadow-md"
+      }`}
       onMouseEnter={() => {
         setIsHovered(true);
-        setStatusText("Ready right now !");
+        setStatusText("Are you ready ?");
       }}
       onMouseLeave={() => {
         setIsHovered(false);
@@ -19,7 +21,7 @@ const AvailableButton = () => {
     >
       <img src={avatar} alt="avatar" className="w-8 h-auto py-2 mx-2" />
       <span
-        className={`text-center text-sm font-medium ${
+        className={`pt-1 text-center text-sm font-normal font-rubik ${
           isHovered ? "text-green-600" : ""
         }`}
       >
