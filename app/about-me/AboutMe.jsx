@@ -6,12 +6,12 @@ import Card from "../../components/Card";
 
 const AboutMe = () => {
   return (
-    <div className="m-auto text-center h-[600px] bg-[#f7f7f8] w-3/4 rounded-[40px] pt-12 px-[12px] pb-[4px] ">
-      <h2 className="text-[calc(1rem+.5vw)] text-3xl text-[#000e23] font-[600] pb-5 tracking-wide">
+    <div className="mx-auto text-center h-[600px] bg-[#f7f7f8] w-3/4 rounded-[40px] p-6">
+      <h2 className="text-[calc(1rem+.5vw)] text-3xl text-[#000e23] font-semibold mt-5 pb-5 tracking-wide">
         Agile Coach
       </h2>
       <SelfIntroduction />
-      <div className="flex flex-row gap-5 px-5 justify-evenly max-w-3/4">
+      <div className="flex flex-row gap-5 cursor-pointer justify-evenly max-w-3/4">
         {skills.map((skill, index) => (
           <Card
             key={index}
@@ -30,7 +30,7 @@ export default AboutMe;
 
 const SelfIntroduction = () => {
   return (
-    <p className="font-rubik text-xl text-[#000e23] font-[350]  tracking-wide mb-14">
+    <p className="font-rubik text-xl text-[#000e23] font-light tracking-wide mb-16">
       With a solid{" "}
       <span className="underline selection:bg-fuchsia-300 underline-offset-4 decoration-0">
         background in software development

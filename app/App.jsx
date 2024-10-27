@@ -12,10 +12,10 @@ export default function App() {
       <Hero />
       <Banner />
       <AboutMe />
-      {/* <Banner />
+      <Banner />
       <Jobs />
       <Banner />
-      <WorkProcess /> */}
+      <WorkProcess />
     </>
   );
 }
