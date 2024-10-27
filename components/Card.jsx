@@ -11,7 +11,7 @@ const Card = ({ skill, description, image, imageAlt }) => {
           className="grayscale-[70%] self-center"
         />
         <div className="px-8 text-left font-rubik">
-          <div className="font-[500]"> {skill}</div>
+          <div className="font-[500]">{skill}</div>
           <div>{description}</div>
         </div>
       </div>

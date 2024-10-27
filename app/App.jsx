@@ -14,8 +14,8 @@ export default function App() {
       <AboutMe />
       <Banner />
       <Jobs />
-      <Banner />
-      <WorkProcess />
+      {/* <Banner />
+      <WorkProcess /> */}
     </>
   );
 }

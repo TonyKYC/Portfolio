@@ -24,3 +24,7 @@
     src: url("./assets/fonts/Rubik.ttf");
   }
 }
+
+.hover\:rotate-90:hover {
+  transform: rotate(90deg);
+}
