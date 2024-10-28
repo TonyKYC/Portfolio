@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Toaster, toast } from "sonner";
 
 import ContactButton from "../../components/ContactButton";
@@ -6,11 +6,12 @@ import ContactButton from "../../components/ContactButton";
 const Hero = ({ aboutRef }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isEmailCopied, setEmailCopied] = useState(false);
-  const handleCopyEmail = () => {
-    setEmailCopied(true); // Set to true immediately on click
+
+  const handleCopyEmail = useCallback(() => {
+    setEmailCopied(true);
     navigator.clipboard.writeText("anthony.abramo.pro@gmail.com");
-    setTimeout(() => setEmailCopied(false), 100); // Reset after 1 second
-  };
+    setTimeout(() => setEmailCopied(false), 100);
+  }, []);
 
   const handleClickAbout = () => {
     if (aboutRef.current) {
@@ -48,11 +49,7 @@ const Hero = ({ aboutRef }) => {
               <ArrowIcon isHovered={isHovered} />
             </div>
             <div>
-              {window.innerWidth <= 640 ? (
-                <Toaster richColors position="top-center" />
-              ) : (
-                <Toaster richColors />
-              )}
+              <Toaster richColors position="top-center" className="top-[15%]" />
               <ContactButton
                 style={isEmailCopied ? "translate-y-1" : ""}
                 variant="outlined"
@@ -60,7 +57,6 @@ const Hero = ({ aboutRef }) => {
                   <CopyIcon
                     onClick={() => {
                       handleCopyEmail();
-                      setTimeout(() => setEmailCopied(false), 100); // Reset after 1 second
                       toast.success("Email copied successfully");
                     }}
                   />
