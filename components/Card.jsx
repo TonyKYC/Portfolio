@@ -8,10 +8,12 @@ const Card = ({ skill, description, image, imageAlt }) => {
           width={150}
           height={150}
           style={{ opacity: 0.8 }}
-          className="grayscale-[70%] self-center"
+          className="grayscale-[70%] self-center max-sm:w-[125px] max-sm:h-[125px] "
         />
         <div className="px-8 text-left font-rubik">
-          <div className="font-[500]">{skill}</div>
+          <div className="font-[500] max-sm:text-xs max-sm:overflow-hidden">
+            {skill}
+          </div>
           <div>{description}</div>
         </div>
       </div>

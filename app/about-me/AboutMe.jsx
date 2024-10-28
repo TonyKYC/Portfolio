@@ -9,13 +9,13 @@ const AboutMe = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="mx-auto text-center h-fit bg-[#f7f7f8] w-3/4 rounded-[40px] p-6"
+      className="mx-auto text-center h-fit bg-[#f7f7f8] w-3/4 rounded-[40px] px-8 pt-6 pb-14"
     >
-      <h2 className="text-[calc(1rem+.9vw)] text-3xl text-[#000e23] font-semibold mt-5 pb-5 tracking-wide">
+      <h2 className="text-[calc(1rem+.9vw)] text-3xl text-[#000e23] font-semibold mt-14 pb-5 tracking-wide">
         Agile Coach
       </h2>
       <SelfIntroduction />
-      <div className="flex flex-row gap-5 cursor-pointer justify-evenly max-w-3/4">
+      <div className="grid grid-cols-3 gap-5 cursor-pointer justify-evenly max-w-3/4 max-sm:grid-cols-1 max-md:grid-cols-1">
         {skills.map((skill, index) => (
           <Card
             key={index}
@@ -34,7 +34,7 @@ export default AboutMe;
 
 const SelfIntroduction = () => {
   return (
-    <p className="font-rubik text-xl text-[#000e23] font-light tracking-wide mb-16">
+    <p className="font-rubik text-xl text-[#000e23] font-light tracking-wide mb-16 max-sm:text-sm ">
       With a solid{" "}
       <span className="underline selection:bg-fuchsia-300 underline-offset-4 decoration-0">
         background in software development

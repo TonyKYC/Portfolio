@@ -6,7 +6,7 @@ const WorkProcess = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="flex justify-center items-center mx-auto h-[900px] w-full pt-8"
+      className="flex justify-center items-center mx-auto w-full pt-8 h-[900px] max-sm:h-[500px]"
     >
       <div className="flex flex-row w-full h-full gap-0 text-center">
         <HoverableDiv

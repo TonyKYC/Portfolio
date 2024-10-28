@@ -1,13 +1,13 @@
 import logo from "/app/assets/logo.png";
 import linkedin from "/app/assets/images/linkedin-logo.png";
 import AvailableButton from "../../components/AvailableButton";
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback } from "react";
 
 const navItems = [
-  { label: "About me", link: "/" },
-  { label: "Experiences", link: "/" },
-  { label: "How I work", link: "/" },
-  { label: "Contact me", link: "/" },
+  { label: "About me", link: "aboutRef" },
+  { label: "Experiences", link: "expRef" },
+  { label: "How I work", link: "workRef" },
+  { label: "Contact me", link: "contactRef" },
 ];
 
 const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
@@ -16,50 +16,24 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
   const handleMouseLeave = useCallback(() => setIsHovered(false), []);
 
-  const handleClickLogo = () => {
+  const handleClickLogo = useCallback(() => {
     const goToTop = document.getElementById("go-to-top");
     goToTop.scrollIntoView({
       behavior: "smooth",
       block: "start",
       inline: "nearest",
     });
-  };
-  const handleClickAbout = () => {
-    if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "nearest",
-      });
-    }
-  };
-  const handleClickExp = () => {
-    if (expRef.current) {
-      expRef.current.scrollIntoView({
+  }, []);
+
+  const handleClick = useCallback((ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
         inline: "nearest",
       });
     }
-  };
-  const handleClickProcess = () => {
-    if (workRef.current) {
-      workRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest",
-      });
-    }
-  };
-  const handleClickContact = () => {
-    if (contactRef.current) {
-      contactRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest",
-      });
-    }
-  };
+  }, []);
 
   return (
     <div id="go-to-top">
@@ -70,39 +44,19 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
               src={logo}
               alt="Agile icons created by Flat Icons - Flaticon https://www.flaticon.com/free-icons/agile"
               className="w-auto h-8 mr-4"
-              onClick={handleClickLogo}
             />
           </button>
           <div className="flex flex-row items-center w-full max-sm:justify-end">
             <div className="flex flex-grow overflow-hidden w-fit max-sm:hidden max-md:hidden">
-              <button
-                key={0}
-                className="py-2 px-1 mx-4 my-2 font-light text-[#000e23] hover:underline underline-offset-8 decoration-0 decoration-[#439051] hover:cursor-pointer"
-                onClick={handleClickAbout}
-              >
-                {navItems[0].label}
-              </button>
-              <button
-                key={1}
-                className="py-2 px-1 mx-4 my-2 font-light text-[#000e23] hover:underline underline-offset-8 decoration-0 decoration-[#439051] hover:cursor-pointer"
-                onClick={handleClickExp}
-              >
-                {navItems[1].label}
-              </button>
-              <button
-                key={2}
-                className="py-2 px-1 mx-4 my-2 font-light text-[#000e23] hover:underline underline-offset-8 decoration-0 decoration-[#439051] hover:cursor-pointer"
-                onClick={handleClickProcess}
-              >
-                {navItems[2].label}
-              </button>
-              <button
-                key={3}
-                className="py-2 px-1 mx-4 my-2 font-light text-[#000e23] hover:underline underline-offset-8 decoration-0 decoration-[#439051] hover:cursor-pointer"
-                onClick={handleClickContact}
-              >
-                {navItems[3].label}
-              </button>
+              {navItems.map((item, index) => (
+                <button
+                  key={index}
+                  className="py-2 px-1 mx-4 my-2 font-light text-[#000e23] hover:underline underline-offset-8 decoration-0 decoration-[#439051] hover:cursor-pointer"
+                  onClick={() => handleClick(eval(item.link))}
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
             <div className="flex items-center">
               <AvailableButton style={""} />

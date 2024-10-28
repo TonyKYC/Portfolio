@@ -4,7 +4,7 @@ import vivlio from "/app/assets/images/vivlio.png";
 import thales from "/app/assets/images/thales.png";
 
 import Poster from "../../components/Poster";
-import { forwardRef, useState } from "react";
+import { forwardRef } from "react";
 
 const Jobs = forwardRef((props, ref) => {
   return (
