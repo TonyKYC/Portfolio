@@ -6,8 +6,8 @@ import Card from "../../components/Card";
 
 const AboutMe = () => {
   return (
-    <div className="mx-auto text-center h-[600px] bg-[#f7f7f8] w-3/4 rounded-[40px] p-6">
-      <h2 className="text-[calc(1rem+.5vw)] text-3xl text-[#000e23] font-semibold mt-5 pb-5 tracking-wide">
+    <div className="mx-auto text-center h-fit bg-[#f7f7f8] w-3/4 rounded-[40px] p-6">
+      <h2 className="text-[calc(1rem+.9vw)] text-3xl text-[#000e23] font-semibold mt-5 pb-5 tracking-wide">
         Agile Coach
       </h2>
       <SelfIntroduction />

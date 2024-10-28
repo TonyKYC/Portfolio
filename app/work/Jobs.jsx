@@ -49,7 +49,7 @@ const Jobs = () => {
           ></div>
         </>
       )}
-      <h2 className="text-[calc(1rem+.5vw)] text-3xl text-[#000e23] font-semibold mt-5 pb-5 tracking-wide">
+      <h2 className="text-[calc(1rem+.9vw)] text-3xl text-[#000e23] font-semibold mt-5 pb-5 tracking-wide">
         Key Experiences
       </h2>
       <div className="mb-16">
@@ -60,7 +60,7 @@ const Jobs = () => {
         , the pictures shown are screenshots of images publically available. Not
         representative of actual projects I worked on.
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-6">
         <div className="grid w-[70%] grid-cols-2 gap-5 cursor-pointer">
           {jobs.map((job, index) => (
             <Poster
