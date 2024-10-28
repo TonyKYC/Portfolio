@@ -7,51 +7,11 @@ import Poster from "../../components/Poster";
 import { forwardRef, useState } from "react";
 
 const Jobs = forwardRef((props, ref) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [expandedImage, setExpandedImage] = useState(null);
-
-  const handleExpand = (image) => {
-    setIsExpanded(!isExpanded);
-    setExpandedImage(image);
-  };
-
   return (
     <div
       ref={ref}
       className="text-center bg-[#f7f7f8] w-full h-fit rounded-[50px] p-6"
     >
-      {isExpanded && (
-        <>
-          <img
-            src={expandedImage}
-            onClick={() => handleExpand(expandedImage)}
-            className="absolute z-50 w-auto transform translate-x-[20%] translate-y-[15%] h-3/4 shadow-2xl"
-          />
-          <button
-            className="absolute z-50 left-[calc(50%-21px)] translate-y-[100%] border rounded-full border-black p-1 cursor-pointer hover:bg-white transition-transform duration-300 hover:-rotate-90" // Changed to rotate the button
-            onClick={() => handleExpand(expandedImage)} // Close the expanded view
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="z-50 w-8 h-8 text-black "
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-          <div
-            className="absolute z-40 w-[90vw] h-[105vh] backdrop-blur-lg rounded-[50px]"
-            // onClick={() => handleExpand(expandedImage)}
-          ></div>
-        </>
-      )}
       <h2 className="text-[calc(1rem+.9vw)] text-3xl text-[#000e23] font-semibold mt-14 pb-5 tracking-wide">
         Key Experiences
       </h2>
@@ -64,7 +24,7 @@ const Jobs = forwardRef((props, ref) => {
         representative of actual projects I worked on.
       </div>
       <div className="flex justify-center mb-6">
-        <div className="grid w-[70%] grid-cols-2 gap-5 cursor-pointer">
+        <div className="grid w-[70%] md:grid-cols-2 gap-6 cursor-pointer max-sm:grid-col-1">
           {jobs.map((job, index) => (
             <Poster
               key={index}
@@ -72,7 +32,6 @@ const Jobs = forwardRef((props, ref) => {
               companyDetails={job.description}
               image={job.image}
               imageAlt={job.imageAlt}
-              handleOnClick={() => handleExpand(job.image)}
             />
           ))}
         </div>

@@ -14,7 +14,11 @@ const Hero = ({ aboutRef }) => {
 
   const handleClickAbout = () => {
     if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+      aboutRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      });
     }
   };
 
