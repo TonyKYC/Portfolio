@@ -1,6 +1,23 @@
+import { useState } from "react";
+import { Toaster, toast } from "sonner";
+
 import ContactButton from "../../components/ContactButton";
 
-const Hero = () => {
+const Hero = ({ aboutRef }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isEmailCopied, setEmailCopied] = useState(false);
+  const handleCopyEmail = () => {
+    setEmailCopied(true); // Set to true immediately on click
+    navigator.clipboard.writeText("anthony.abramo.pro@gmail.com");
+    setTimeout(() => setEmailCopied(false), 100); // Reset after 1 second
+  };
+
+  const handleClickAbout = () => {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className=" justify-center items-center rounded-b-[50px] h-[92.2vh] overflow-hidden bg-[#f6f6f6]">
       <div
@@ -18,8 +35,34 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center font-rubik text-xl text-[#000e23] font-[350] pt-3 tracking-wide">
           <p>Hi! I&apos;m Anthony, an efficiency virtuoso.</p>
           <div className="flex flex-row justify-around gap-3 mt-7">
-            <ContactButton variant="filled" label="Contact me" />
-            <ContactButton variant="outlined" label="About me" />
+            <div
+              className="from-[#448ffe] to-[#1f7bff] font-normal text-white justify-center items-center rounded-xl px-4 pb-1 pt-[.3rem] text-sm min-w-[120px] h-11 hover:cursor-pointer bg-gradient-to-b shadow-md  font-rubik flex flex-row"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <button onClick={handleClickAbout}>Learn More</button>
+              <ArrowIcon isHovered={isHovered} />
+            </div>
+            <div>
+              {window.innerWidth <= 640 ? (
+                <Toaster richColors position="top-center" />
+              ) : (
+                <Toaster richColors />
+              )}
+              <ContactButton
+                style={isEmailCopied ? "translate-y-1" : ""}
+                variant="outlined"
+                label={
+                  <CopyIcon
+                    onClick={() => {
+                      handleCopyEmail();
+                      setTimeout(() => setEmailCopied(false), 100); // Reset after 1 second
+                      toast.success("Email copied successfully");
+                    }}
+                  />
+                }
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -38,3 +81,44 @@ const Hero = () => {
 };
 
 export default Hero;
+
+const CopyIcon = ({ onClick }) => (
+  <div className="flex items-center" onClick={onClick}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M9 21H5a2 2 0 01-2-2V7a2 2 0 012-2h4" />
+      <rect x="9" y="9" width="10" height="10" rx="2" />
+    </svg>
+    <p className="ml-1">Copy Email</p>
+  </div>
+);
+
+const ArrowIcon = ({ isHovered }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={`h-4 w-4 ml-[2px] transition-transform duration-200 ${
+        isHovered ? "translate-x-1 rotate-90" : ""
+      } text-white`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M10 6l6 6-6 6"
+      />
+    </svg>
+  );
+};

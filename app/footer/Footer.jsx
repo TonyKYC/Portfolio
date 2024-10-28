@@ -1,7 +1,7 @@
-import React from "react";
+import { forwardRef } from "react";
 
-const Footer = () => {
-  return <></>;
-};
+const Footer = forwardRef((props, ref) => {
+  return <div ref={ref}>Footer</div>;
+});
 
 export default Footer;

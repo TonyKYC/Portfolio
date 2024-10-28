@@ -28,3 +28,8 @@
 .hover\:rotate-90:hover {
   transform: rotate(90deg);
 }
+
+.rotate-180 {
+  transition: transform 0.3s ease;
+  transform: rotate(-180deg);
+}

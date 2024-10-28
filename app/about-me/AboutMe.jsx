@@ -3,10 +3,14 @@ import developer from "/app/assets/images/developer.png";
 import efficiency from "/app/assets/images/efficiency.png";
 
 import Card from "../../components/Card";
+import { forwardRef } from "react";
 
-const AboutMe = () => {
+const AboutMe = forwardRef((props, ref) => {
   return (
-    <div className="mx-auto text-center h-fit bg-[#f7f7f8] w-3/4 rounded-[40px] p-6">
+    <div
+      ref={ref}
+      className="mx-auto text-center h-fit bg-[#f7f7f8] w-3/4 rounded-[40px] p-6"
+    >
       <h2 className="text-[calc(1rem+.9vw)] text-3xl text-[#000e23] font-semibold mt-5 pb-5 tracking-wide">
         Agile Coach
       </h2>
@@ -24,7 +28,7 @@ const AboutMe = () => {
       </div>
     </div>
   );
-};
+});
 
 export default AboutMe;
 

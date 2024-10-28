@@ -1,10 +1,13 @@
-import React from "react";
+import { forwardRef, useState } from "react";
 
 const style = "border border-[#e0e0e0]/[.2] p-4 rounded-[20px] tracking-wide";
 
-const WorkProcess = () => {
+const WorkProcess = forwardRef((props, ref) => {
   return (
-    <div className="flex justify-center items-center mx-auto h-[900px] w-full pt-8">
+    <div
+      ref={ref}
+      className="flex justify-center items-center mx-auto h-[900px] w-full pt-8"
+    >
       <div className="flex flex-row w-full h-full gap-0 text-center">
         <HoverableDiv
           backgroundImage="/assets/bg-red.png"
@@ -27,12 +30,12 @@ const WorkProcess = () => {
       </div>
     </div>
   );
-};
+});
 
 export default WorkProcess;
 
 const HoverableDiv = ({ backgroundImage, children, hoverText }) => {
-  const [hovered, setHovered] = React.useState(false);
+  const [hovered, setHovered] = useState(false);
 
   return (
     <div

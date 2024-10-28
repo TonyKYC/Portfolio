@@ -1,13 +1,13 @@
 import { useState } from "react";
 import avatar from "/app/assets/icons/avatar.png";
 
-const AvailableButton = () => {
+const AvailableButton = ({ style }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [statusText, setStatusText] = useState("Available for work");
 
   return (
     <div
-      className={`relative flex items-center min-w-[181px] rounded-xl ps-1 pe-3 py-4 h-11 mr-3 bg-[#f0f0f0] hover:cursor-pointer transition-transform hover:ease-in ${
+      className={`relative flex items-center min-w-[181px] rounded-xl ps-1 pe-3 py-4 h-11 mr-3 bg-[#f0f0f0] hover:cursor-pointer transition-transform hover:ease-in ${style} ${
         isHovered ? "shadow" : "shadow-md"
       }`}
       onMouseEnter={() => {

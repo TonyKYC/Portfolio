@@ -4,9 +4,9 @@ import vivlio from "/app/assets/images/vivlio.png";
 import thales from "/app/assets/images/thales.png";
 
 import Poster from "../../components/Poster";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 
-const Jobs = () => {
+const Jobs = forwardRef((props, ref) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [expandedImage, setExpandedImage] = useState(null);
 
@@ -16,7 +16,10 @@ const Jobs = () => {
   };
 
   return (
-    <div className="text-center bg-[#f7f7f8] w-full h-fit rounded-[50px] p-6">
+    <div
+      ref={ref}
+      className="text-center bg-[#f7f7f8] w-full h-fit rounded-[50px] p-6"
+    >
       {isExpanded && (
         <>
           <img
@@ -49,7 +52,7 @@ const Jobs = () => {
           ></div>
         </>
       )}
-      <h2 className="text-[calc(1rem+.9vw)] text-3xl text-[#000e23] font-semibold mt-5 pb-5 tracking-wide">
+      <h2 className="text-[calc(1rem+.9vw)] text-3xl text-[#000e23] font-semibold mt-14 pb-5 tracking-wide">
         Key Experiences
       </h2>
       <div className="mb-16">
@@ -76,7 +79,7 @@ const Jobs = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Jobs;
 
