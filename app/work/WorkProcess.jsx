@@ -4,22 +4,22 @@ const style = "border border-[#e0e0e0]/[.2] p-4 rounded-[20px] tracking-wide";
 
 const WorkProcess = () => {
   return (
-    <div className="flex justify-center items-center mx-auto h-[900px] w-full py-8">
+    <div className="flex justify-center items-center mx-auto h-[900px] w-full pt-8">
       <div className="flex flex-row w-full h-full gap-0 text-center">
         <HoverableDiv
-          backgroundImage="/assets/images/bg-red.png"
+          backgroundImage="/assets/bg-red.png"
           hoverText="Identify your needs"
         >
           <div className={style}>Phase 1</div>
         </HoverableDiv>
         <HoverableDiv
-          backgroundImage="/assets/images/bg-green.png"
+          backgroundImage="/assets/bg-green.png"
           hoverText="Understand how you work"
         >
           <div className={style}>Phase 2</div>
         </HoverableDiv>
         <HoverableDiv
-          backgroundImage="/assets/images/bg-blue.png"
+          backgroundImage="/assets/bg-blue.png"
           hoverText="Work with the teams"
         >
           <div className={style}>Phase 3</div>
