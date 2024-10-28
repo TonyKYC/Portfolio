@@ -7,19 +7,19 @@ const WorkProcess = () => {
     <div className="flex justify-center items-center mx-auto h-[900px] w-full py-8">
       <div className="flex flex-row w-full h-full gap-0 text-center">
         <HoverableDiv
-          backgroundImage="/app/assets/images/bg-red.png"
+          backgroundImage="/assets/images/bg-red.png"
           hoverText="Identify your needs"
         >
           <div className={style}>Phase 1</div>
         </HoverableDiv>
         <HoverableDiv
-          backgroundImage="/app/assets/images/bg-green.png"
+          backgroundImage="/assets/images/bg-green.png"
           hoverText="Understand how you work"
         >
           <div className={style}>Phase 2</div>
         </HoverableDiv>
         <HoverableDiv
-          backgroundImage="/app/assets/images/bg-blue.png"
+          backgroundImage="/assets/images/bg-blue.png"
           hoverText="Work with the teams"
         >
           <div className={style}>Phase 3</div>
