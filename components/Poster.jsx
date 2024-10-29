@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 const Poster = ({
   companyName,
@@ -10,17 +10,38 @@ const Poster = ({
   handleOnClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const imgRef = useRef(null);
+  const [isImageVisible, setIsImageVisible] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
   const handleMouseLeave = useCallback(() => setIsHovered(false), []);
 
   useEffect(() => {
-    const preloadImages = [image];
-    preloadImages.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, [image]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsImageVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => {
+      if (imgRef.current) {
+        observer.unobserve(imgRef.current);
+      }
+    };
+  }, []);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
 
   return (
     <div
@@ -29,12 +50,15 @@ const Poster = ({
       onMouseLeave={handleMouseLeave}
     >
       <img
-        src={image}
+        ref={imgRef}
+        src={isImageVisible ? image : undefined}
         alt={imageAlt}
-        className={`grayscale-[10%] max-sm:h-[50%] max-md:h-[50%] md:h-[50%] lg:-h-[50%] xl:h-[60%] max-sm:w-auto self-center align-middle rounded-t-[20px] ${
-          isHovered ? "w-auto " : "w-auto max-sm:h-24"
-        } `}
+        loading="lazy"
+        className={`grayscale-[10%] max-sm:h-[50%] max-md:h-[50%] md:h-[50%] lg:-h-[50%] xl:h-[60%] max-sm:w-auto self-center align-middle rounded-t-[20px] transition-opacity duration-500 ${
+          isImageLoaded ? "opacity-100" : "opacity-0"
+        }`}
         onClick={isHovered ? handleOnClick : undefined}
+        onLoad={handleImageLoad}
       />
 
       <div
@@ -54,7 +78,6 @@ const Poster = ({
             {companySummary}
             {companyDetails}
           </span>
-          {/* <span className="text-sm max-sm:text-xs"></span> */}
         </div>
       </div>
     </div>

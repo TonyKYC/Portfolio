@@ -1,4 +1,4 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useState, useEffect } from "react";
 
 const style = "border border-[#e0e0e0]/[.2] p-4 rounded-[20px] tracking-wide";
 
@@ -36,12 +36,35 @@ export default WorkProcess;
 
 const HoverableDiv = ({ backgroundImage, children, hoverText }) => {
   const [hovered, setHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Lazy loading effect
+  const handleScroll = () => {
+    const rect = document
+      .getElementById(`hoverable-${hoverText}`)
+      .getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      // Pre-load the image
+      const img = new Image();
+      img.src = backgroundImage;
+
+      setIsVisible(true);
+      window.removeEventListener("scroll", handleScroll);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div
+      id={`hoverable-${hoverText}`}
       className="w-1/3 h-full bg-center bg-cover border-[0.05rem] opacity-1 hover:opacity-100 border-[#414141]/[.5] text-white flex items-center justify-center font-rubik text-xl cursor-grab"
       style={{
-        backgroundImage: hovered ? `url(${backgroundImage})` : "none",
+        backgroundImage:
+          isVisible && hovered ? `url(${backgroundImage})` : "none",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
