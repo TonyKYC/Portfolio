@@ -88,11 +88,11 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
         }`}
       >
         <div className="flex justify-center items-center max-w-[1320px] font-extralight m-auto">
-          <button className="mb-1 mr-4" onClick={handleClickLogo}>
+          <button onClick={handleClickLogo}>
             <img
               src={logo}
               alt="Agile icons created by Flat Icons - Flaticon https://www.flaticon.com/free-icons/agile"
-              className="h-8 mr-4 min-w-8"
+              className="h-10 mr-4 min-w-8"
             />
           </button>
           <div className="flex flex-row items-center w-full max-lg:justify-end">
