@@ -7,7 +7,7 @@ const AvailableButton = ({ style }) => {
 
   return (
     <div
-      className={`relative flex items-center min-w-[181px] rounded-xl ps-1 pe-3 py-4 h-11 mr-3 bg-[#f0f0f0] hover:cursor-pointer transition-transform hover:ease-in ${style} ${
+      className={`relative flex items-center w-[180px] rounded-xl ps-1 pe-3 py-4 h-11 mr-3 bg-[#f0f0f0] hover:cursor-pointer transition-transform hover:ease-in ${style} ${
         isHovered ? "shadow" : "shadow-md"
       }`}
       onMouseEnter={() => {

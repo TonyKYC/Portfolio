@@ -1,5 +1,6 @@
 import logo from "/app/assets/logo.png";
-import linkedin from "/app/assets/images/linkedin-logo.png";
+import linkedin from "/app/assets/logo/linkedin-logo.png";
+
 import AvailableButton from "../../components/AvailableButton";
 import { useState, useCallback } from "react";
 
@@ -43,11 +44,11 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
             <img
               src={logo}
               alt="Agile icons created by Flat Icons - Flaticon https://www.flaticon.com/free-icons/agile"
-              className="w-auto h-8 mr-4"
+              className="h-8 mr-4 min-w-8"
             />
           </button>
-          <div className="flex flex-row items-center w-full max-sm:justify-end">
-            <div className="flex flex-grow overflow-hidden w-fit max-sm:hidden max-md:hidden">
+          <div className="flex flex-row items-center w-full max-lg:justify-end">
+            <div className="flex flex-grow overflow-hidden w-fit max-sm:hidden max-lg:hidden">
               {navItems.map((item, index) => (
                 <button
                   key={index}
@@ -59,7 +60,7 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
               ))}
             </div>
             <div className="flex items-center">
-              <AvailableButton style={""} />
+              <AvailableButton />
               <div className="sm:hidden"></div>
               <a
                 href="https://www.linkedin.com/in/anthony-abramo/"
@@ -68,7 +69,7 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
               >
                 <img
                   src={linkedin}
-                  className={`ml-2 w-auto h-[35px] ${isHovered ? "mt-1" : ""}`}
+                  className={`ml-2 min-w-9 h-9 ${isHovered ? "mt-1" : ""}`}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />
