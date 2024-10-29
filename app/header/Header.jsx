@@ -1,7 +1,12 @@
 import logo from "/app/assets/logo.png";
 import linkedin from "/app/assets/logo/linkedin-logo.png";
+import instagram from "/app/assets/logo/instagram-logo.png";
+import twitter from "/app/assets/logo/twitter-logo.png";
+import line from "/app/assets/logo/line-logo.png";
 
 import AvailableButton from "../../components/AvailableButton";
+
+import { Toaster, toast } from "sonner";
 import { useState, useCallback } from "react";
 
 const navItems = [
@@ -12,10 +17,25 @@ const navItems = [
 ];
 
 const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(
+    Array(navItems.length).fill(false)
+  );
 
-  const handleMouseEnter = useCallback(() => setIsHovered(true), []);
-  const handleMouseLeave = useCallback(() => setIsHovered(false), []);
+  const handleMouseEnter = useCallback((index) => {
+    setIsHovered((prev) => {
+      const newHovered = [...prev];
+      newHovered[index] = true;
+      return newHovered;
+    });
+  }, []);
+
+  const handleMouseLeave = useCallback((index) => {
+    setIsHovered((prev) => {
+      const newHovered = [...prev];
+      newHovered[index] = false;
+      return newHovered;
+    });
+  }, []);
 
   const handleClickLogo = useCallback(() => {
     const goToTop = document.getElementById("go-to-top");
@@ -69,11 +89,48 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
               >
                 <img
                   src={linkedin}
-                  className={`ml-2 min-w-9 h-9 ${isHovered ? "mt-1" : ""}`}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
+                  className={`ml-2 min-w-9 h-9 ${isHovered[0] ? "mt-1" : ""}`}
+                  onMouseEnter={() => handleMouseEnter(0)}
+                  onMouseLeave={() => handleMouseLeave(0)}
+                  onClick={() => {
+                    toast.success("Get in touch. Happy to meet anytime.");
+                  }}
                 />
               </a>
+              {/* <Toaster richColors position="top-right" /> */}
+              <img
+                src={line}
+                className={`ml-2 min-w-9 h-9 ${isHovered[1] ? "mt-1" : ""}`}
+                onMouseEnter={() => handleMouseEnter(1)}
+                onMouseLeave={() => handleMouseLeave(1)}
+                onClick={() => {
+                  toast.info(
+                    "Get in touch by email first, I'd be happy to give you my line after meeting."
+                  );
+                }}
+              />
+              <img
+                src={instagram}
+                className={`ml-2 min-w-10 h-10 ${isHovered[2] ? "mt-1" : ""}`}
+                onMouseEnter={() => handleMouseEnter(2)}
+                onMouseLeave={() => handleMouseLeave(2)}
+                onClick={() => {
+                  toast.error("I don't post pictures of me, sorry.");
+                }}
+              />
+              <img
+                src={twitter}
+                className={`ml-2 min-w-9 h-[34px] ${
+                  isHovered[3] ? "mt-1" : ""
+                }`}
+                onMouseEnter={() => handleMouseEnter(3)}
+                onMouseLeave={() => handleMouseLeave(3)}
+                onClick={() => {
+                  toast.warning(
+                    "I don't tell everyone what I do all day long either."
+                  );
+                }}
+              />
             </div>
           </div>
         </div>
