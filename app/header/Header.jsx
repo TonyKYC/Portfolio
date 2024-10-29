@@ -7,7 +7,7 @@ import line from "/app/assets/logo/line-logo.png";
 import AvailableButton from "../../components/AvailableButton";
 
 import { toast } from "sonner";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 
 const navItems = [
   { label: "About me", link: "aboutRef" },
@@ -20,6 +20,30 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
   const [isHovered, setIsHovered] = useState(
     Array(navItems.length).fill(false)
   );
+  const [isHeaderVisible, setHeaderVisible] = useState(false);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHeaderVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => {
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, []);
 
   const handleMouseEnter = useCallback((index) => {
     setIsHovered((prev) => {
@@ -57,8 +81,12 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
   }, []);
 
   return (
-    <div id="go-to-top">
-      <nav className="top-0 right-0 left-0 z-[100] py-2 px-4 scroll-mb-0 fixed backdrop-blur-[12px] bg-[rgba(255,255,255,.7)]">
+    <div ref={headerRef} id="go-to-top">
+      <nav
+        className={`top-0 right-0 left-0 z-[100] py-2 px-4 scroll-mb-0 fixed backdrop-blur-[12px] bg-[rgba(255,255,255,.7)] transition-opacity duration-1000 ${
+          isHeaderVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <div className="flex justify-center items-center max-w-[1320px] font-extralight m-auto">
           <button className="mb-1 mr-4" onClick={handleClickLogo}>
             <img

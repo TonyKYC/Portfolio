@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { Toaster, toast } from "sonner";
 
 import ContactButton from "../../components/ContactButton";
@@ -6,6 +6,30 @@ import ContactButton from "../../components/ContactButton";
 const Hero = ({ aboutRef }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isEmailCopied, setEmailCopied] = useState(false);
+  const [isHeaderVisible, setHeaderVisible] = useState(false);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHeaderVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => {
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, []);
 
   const handleCopyEmail = useCallback(() => {
     setEmailCopied(true);
@@ -27,7 +51,10 @@ const Hero = ({ aboutRef }) => {
     <div className=" justify-center items-center rounded-b-[50px] h-[92.2vh] overflow-hidden bg-[#f6f6f6] md:max-h-[900px] lg:max-h-[900px]">
       <div
         id="header-hero"
-        className="absolute z-200000 top-[24%] left-0 right-0 ms-auto me-auto w-fit align-middle text-center bg-radial-custom "
+        ref={headerRef}
+        className={`absolute z-200000 top-[24%] left-0 right-0 ms-auto me-auto w-fit align-middle text-center bg-radial-custom transition-opacity duration-1000 ${
+          isHeaderVisible ? "opacity-100" : "opacity-0"
+        }`}
       >
         <p className="text-[#438fff] font-square-peg text-[calc(1.5rem+1vw)]">
           Mastering agility, optimizing efficiency
