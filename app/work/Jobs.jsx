@@ -6,7 +6,7 @@ import carrefourLogo from "/app/assets/logo/carrefour-logo.jpg";
 import rasLogo from "/app/assets/logo/ras-interim-logo.png";
 import zolLogo from "/app/assets/logo/zol-logo.jpeg";
 import vivlioLogo from "/app/assets/logo/vivlio-logo.webp";
-import thalesLogo from "/app/assets/logo/thales-logo.jpg";
+import thalesLogo from "/app/assets/thales-logo.jpg";
 
 import Poster from "../../components/Poster";
 import { forwardRef } from "react";
@@ -89,16 +89,6 @@ const jobs = [
       "Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet",
     logo: vivlioLogo,
     image: vivlio,
-    imageAlt:
-      "Icon by mikan933 - @https://www.freepik.com/icon/efficiency_8209963#fromView=search&page=2&position=89&uuid=4770b237-4080-4c91-b768-ea42cab59809",
-  },
-  {
-    name: "Thales",
-    year: "2019 - 2021",
-    summary: "Summary of the company",
-    description: "Lorem ipsum dolor sit amet, consectetur",
-    logo: thalesLogo,
-    image: thales,
     imageAlt:
       "Icon by mikan933 - @https://www.freepik.com/icon/efficiency_8209963#fromView=search&page=2&position=89&uuid=4770b237-4080-4c91-b768-ea42cab59809",
   },
