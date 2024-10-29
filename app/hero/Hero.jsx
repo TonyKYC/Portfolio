@@ -24,15 +24,15 @@ const Hero = ({ aboutRef }) => {
   };
 
   return (
-    <div className=" justify-center items-center rounded-b-[50px] h-[92.2vh] overflow-hidden bg-[#f6f6f6]">
+    <div className=" justify-center items-center rounded-b-[50px] h-[92.2vh] overflow-hidden bg-[#f6f6f6] md:max-h-[900px] lg:max-h-[900px]">
       <div
         id="header-hero"
-        className="absolute z-200000 top-[24%] left-0 right-0 ms-auto me-auto w-fit align-middle text-center bg-radial-custom"
+        className="absolute z-200000 top-[24%] left-0 right-0 ms-auto me-auto w-fit align-middle text-center bg-radial-custom "
       >
         <p className="text-[#438fff] font-square-peg text-[calc(1.5rem+1vw)]">
           Mastering agility, optimizing efficiency
         </p>
-        <h1 className="font-rubik text-[calc(1.1rem+3.9vw)] font-[600] leading-tight bg-gradient-to-t from-[#439051] via-[#042350] via-30% to-[#002c6d] inline-block text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.2)]">
+        <h1 className="font-rubik text-[calc(1.1rem+3.9vw)] font-[600] leading-tight bg-gradient-to-t from-[#439051] via-[#042350] via-30% to-[#002c6d] inline-block text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.2)] z-50">
           Harnessing Agility for
           <br />
           Efficient Product Delivery
@@ -49,7 +49,7 @@ const Hero = ({ aboutRef }) => {
               <ArrowIcon isHovered={isHovered} />
             </div>
             <div>
-              <Toaster richColors position="top-center" className="top-[15%]" />
+              <Toaster richColors position="top-center" className="top-[10%]" />
               <ContactButton
                 style={isEmailCopied ? "translate-y-1" : ""}
                 variant="outlined"
