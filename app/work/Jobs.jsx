@@ -6,7 +6,7 @@ import carrefourLogo from "/app/assets/logo/carrefour-logo.jpg";
 import rasLogo from "/app/assets/logo/ras-interim-logo.png";
 import zolLogo from "/app/assets/logo/zol-logo.jpeg";
 import vivlioLogo from "/app/assets/logo/vivlio-logo.webp";
-import thalesLogo from "/app/assets/thales-logo.jpg";
+import thalesLogo from "/app/assets/logo/thales-logo.jpg";
 
 import Poster from "../../components/Poster";
 import { forwardRef } from "react";

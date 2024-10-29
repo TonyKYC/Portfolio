@@ -43,7 +43,8 @@ const Poster = ({
       />
 
       <div
-        className={`flex flex-col px-5 py-3 text-left font-rubik max-sm:h-[30%] max-sm:text-xs max-sm:px-4 max-sm:py-2 transition-transform duration-[700ms] bg-white ${
+        id="1"
+        className={`flex flex-col px-5 py-3 text-left font-rubik max-sm:h-[30%] max-sm:text-xs max-sm:px-4 max-sm:py-2 transition-transform duration-[700ms] rounded-[20px] bg-white ${
           isHovered
             ? "md:translate-y-[-43%] lg:translate-y-[-43%] z-40 rounded-[20px] py-5 h-aut border-t-2 bg-[#f6f6f6]"
             : "translate-y-[-0%] h-auto"
