@@ -44,7 +44,7 @@ const Card = ({ skill, description, image, imageAlt }) => {
           onLoad={handleImageLoad}
           width={150}
           height={150}
-          className={`grayscale-[70%] self-center max-sm:w-[125px] max-sm:h-[125px] max-lg:w-[125px] max-lg:h-[125px] transition-opacity duration-1000 ${
+          className={`grayscale-[70%] self-center max-sm:w-[125px] max-sm:h-[125px] max-lg:w-[125px] max-lg:h-[125px] transition-opacity duration-500 ${
             isImageLoaded ? "opacity-100" : "opacity-0"
           }`}
         />

@@ -54,7 +54,7 @@ const Poster = ({
         src={isImageVisible ? image : undefined}
         alt={imageAlt}
         loading="lazy"
-        className={`grayscale-[10%] max-sm:h-[50%] max-md:h-[50%] md:h-[50%] lg:-h-[50%] xl:h-[60%] max-sm:w-auto self-center align-middle rounded-t-[20px] transition-opacity duration-1000 ${
+        className={`grayscale-[10%] max-sm:h-[50%] max-md:h-[50%] md:h-[50%] lg:-h-[50%] xl:h-[60%] max-sm:w-auto self-center align-middle rounded-t-[20px] transition-opacity duration-500 ${
           isImageLoaded ? "opacity-100" : "opacity-0"
         }`}
         onClick={isHovered ? handleOnClick : undefined}

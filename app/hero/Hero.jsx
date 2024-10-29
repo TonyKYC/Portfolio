@@ -52,7 +52,7 @@ const Hero = ({ aboutRef }) => {
       <div
         id="header-hero"
         ref={headerRef}
-        className={`absolute z-200000 top-[24%] left-0 right-0 ms-auto me-auto w-fit align-middle text-center bg-radial-custom transition-opacity duration-1000 ${
+        className={`absolute z-200000 top-[24%] left-0 right-0 ms-auto me-auto w-fit align-middle text-center bg-radial-custom transition-opacity duration-500 ${
           isHeaderVisible ? "opacity-100" : "opacity-0"
         }`}
       >

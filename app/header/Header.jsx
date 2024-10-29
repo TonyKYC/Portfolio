@@ -83,7 +83,7 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
   return (
     <div ref={headerRef} id="go-to-top">
       <nav
-        className={`top-0 right-0 left-0 z-[100] py-2 px-4 scroll-mb-0 fixed backdrop-blur-[12px] bg-[rgba(255,255,255,.7)] transition-opacity duration-1000 ${
+        className={`top-0 right-0 left-0 z-[100] py-2 px-4 scroll-mb-0 fixed backdrop-blur-[12px] bg-[rgba(255,255,255,.7)] transition-opacity duration-500 ${
           isHeaderVisible ? "opacity-100" : "opacity-0"
         }`}
       >
