@@ -13,12 +13,16 @@ const Jobs = forwardRef((props, ref) => {
         Key Experiences
       </h2>
       <div className="mb-16">
-        In order to{" "}
-        <span className="underline selection:bg-yellow-300 underline-offset-4 decoration-0">
-          respect NDAs
-        </span>
-        , the pictures shown are screenshots of images publically available. Not
-        representative of actual projects I worked on.
+        <i>
+          {" "}
+          In order to{" "}
+          <span className="underline selection:bg-yellow-300 underline-offset-4 decoration-0">
+            respect various NDAs
+          </span>
+          , the pictures shown are the logo of the companies publically
+          available. <br />
+          No information about the projects/products are available online.
+        </i>
       </div>
       <div className="flex justify-center mb-6">
         <div className="grid w-[70%]  gap-4 cursor-pointer xl:grid-cols-3 lg:grid-cols-2 max-sm:grid-col-1 md:grid-cols-2">
