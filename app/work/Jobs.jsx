@@ -21,7 +21,7 @@ const Jobs = forwardRef((props, ref) => {
         representative of actual projects I worked on.
       </div>
       <div className="flex justify-center mb-6">
-        <div className="grid w-[70%] lg:grid-cols-3 gap-4 cursor-pointer max-sm:grid-col-1 md:grid-cols-1">
+        <div className="grid w-[70%]  gap-4 cursor-pointer xl:grid-cols-3 lg:grid-cols-2 max-sm:grid-col-1 md:grid-cols-2">
           {jobs.map((job, index) => (
             <Poster
               key={index}

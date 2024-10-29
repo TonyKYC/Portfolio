@@ -6,7 +6,7 @@ import line from "/app/assets/logo/line-logo.png";
 
 import AvailableButton from "../../components/AvailableButton";
 
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { useState, useCallback } from "react";
 
 const navItems = [
@@ -97,7 +97,6 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
                   }}
                 />
               </a>
-              {/* <Toaster richColors position="top-right" /> */}
               <img
                 src={line}
                 className={`ml-2 min-w-9 h-9 ${isHovered[1] ? "mt-1" : ""}`}

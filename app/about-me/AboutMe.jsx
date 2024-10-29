@@ -9,7 +9,7 @@ const AboutMe = forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className="mx-auto text-center h-fit bg-[#f7f7f8] w-3/4 rounded-[40px] px-8 pt-6 pb-14"
+      className="mx-auto text-center h-fit bg-[#f7f7f8] w-3/4 max-md:w-full rounded-[40px] px-8 pt-6 pb-14"
     >
       <h2 className="text-[calc(1rem+.9vw)] text-3xl text-[#000e23] font-semibold mt-14 pb-5 tracking-wide">
         Agile Coach
