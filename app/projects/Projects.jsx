@@ -31,7 +31,7 @@ const Projetcs = forwardRef((props, ref) => {
               <img
                 src={project?.image}
                 alt={project?.imageAlt}
-                className="object-cover w-full h-48"
+                className="object-cover h-48 mx-auto"
               />
               <div className="p-6">
                 <div className="flex flex-row items-center justify-between">
