@@ -1,7 +1,6 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import linkedin from "/app/assets/logo/linkedin-logo.png";
-import instagram from "/app/assets/logo/instagram-logo.png";
 import line from "/app/assets/logo/line-logo.png";
 
 const Footer = forwardRef((props, ref) => {
@@ -35,14 +34,6 @@ const Footer = forwardRef((props, ref) => {
             whileHover={{ scale: 1.1 }}
           >
             <img src={line} className="w-8 h-8" alt="Line" />
-          </motion.a>
-          <motion.a
-            href="#"
-            aria-label="Instagram"
-            onClick={(e) => e.preventDefault()}
-            whileHover={{ scale: 1.1 }}
-          >
-            <img src={instagram} className="w-8 h-8" alt="Instagram" />
           </motion.a>
         </div>
       </div>
