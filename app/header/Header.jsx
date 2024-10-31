@@ -1,6 +1,6 @@
 import logo from "/app/assets/logo.png";
 import linkedin from "/app/assets/logo/linkedin-logo.png";
-import instagram from "/app/assets/logo/instagram-logo.png";
+import github from "/app/assets/logo/github-logo.png";
 import line from "/app/assets/logo/line-logo.png";
 
 import AvailableButton from "../../components/AvailableButton";
@@ -10,7 +10,7 @@ import { useState, useCallback, useRef, useMemo } from "react";
 import { motion } from "framer-motion";
 
 const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
-  const [isHovered, setIsHovered] = useState(Array(4).fill(false));
+  const [hoveredIcon, setHoveredIcon] = useState(null);
   const headerRef = useRef(null);
 
   const navItems = useMemo(
@@ -19,15 +19,11 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
       { label: "Key Experiences", ref: expRef },
       { label: "Contact me", ref: contactRef },
     ],
-    [aboutRef, expRef, workRef, contactRef]
+    [aboutRef, expRef, contactRef]
   );
 
-  const handleMouseToggle = useCallback((index, isEntering) => {
-    setIsHovered((prev) => {
-      const newHovered = [...prev];
-      newHovered[index] = isEntering;
-      return newHovered;
-    });
+  const handleMouseToggle = useCallback((index) => {
+    setHoveredIcon(index);
   }, []);
 
   const handleClickLogo = useCallback(() => {
@@ -47,19 +43,20 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="top-0 right-0 left-0 z-[100] py-2 px-4 scroll-mb-0 fixed backdrop-blur-[12px] bg-[rgba(255,255,255,.7)]"
+        className="top-0 right-0 left-0 z-[100] max-h-[70px] py-2 px-4 scroll-mb-0 fixed backdrop-blur-[12px] bg-[rgba(255,255,255,.7)]"
       >
         <div className="flex flex-row items-center justify-between lg:justify-between font-extralight max-w-[100vw]">
           <button onClick={handleClickLogo} aria-label="Go to top">
-            <img src={logo} alt="Logo" className="h-10 mr-4 min-w-8" />
+            <img src={logo} alt="Logo" className="h-10 min-w-8" />
           </button>
-          <div className="flex max-lg:hidden">
+          <div className="flex max-md:hidden">
             {navItems.map((item, index) => (
               <button
                 key={index}
-                className="py-2 px-1 mx-4 my-2 font-light text-[#000e23] hover:underline underline-offset-8 decoration-0 decoration-[#439051] hover:cursor-pointer"
+                className="py-2 px-1 mx-4 max-md:mx-2 my-2 font-light text-[#000e23] hover:underline underline-offset-8 decoration-0 decoration-[#439051] hover:cursor-pointer"
                 onClick={() => handleClick(item.ref)}
                 aria-label={`Navigate to ${item.label}`}
+                role="button"
               >
                 {item.label}
               </button>
@@ -76,43 +73,49 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
               >
                 <img
                   src={linkedin}
-                  className={`ml-2 min-w-9 h-9 cursor-pointer ${
-                    isHovered[0] ? "mt-1" : ""
+                  className={`ml-2 min-w-[38px] h-[38px] border border-white rounded-lg cursor-pointer ${
+                    hoveredIcon === 0 ? "mt-1" : ""
                   }`}
-                  onMouseEnter={() => handleMouseToggle(0, true)}
-                  onMouseLeave={() => handleMouseToggle(0, false)}
+                  onMouseEnter={() => handleMouseToggle(0)}
+                  onMouseLeave={() => handleMouseToggle(null)}
                   onClick={() =>
                     toast.success("Get in touch. Happy to meet anytime.")
                   }
-                  aria-label="LinkedIn"
+                  alt="LinkedIn Logo"
                 />
               </a>
               <img
                 src={line}
                 className={`ml-2 min-w-9 h-9 cursor-pointer ${
-                  isHovered[1] ? "mt-1" : ""
+                  hoveredIcon === 1 ? "mt-1" : ""
                 }`}
-                onMouseEnter={() => handleMouseToggle(1, true)}
-                onMouseLeave={() => handleMouseToggle(1, false)}
+                onMouseEnter={() => handleMouseToggle(1)}
+                onMouseLeave={() => handleMouseToggle(null)}
                 onClick={() =>
                   toast.info(
                     "Get in touch by email down below, we can exchange Lines after meeting."
                   )
                 }
-                aria-label="Line"
+                alt="Line Logo"
               />
-              {/* <img
-                src={instagram}
-                className={`ml-2 min-w-10 h-10 cursor-pointer ${
-                  isHovered[2] ? "mt-1" : ""
-                }`}
-                onMouseEnter={() => handleMouseToggle(2, true)}
-                onMouseLeave={() => handleMouseToggle(2, false)}
-                onClick={() =>
-                  toast.error("I don't post pictures of me, sorry.")
-                }
-                aria-label="Instagram"
-              /> */}
+              <a
+                href="https://github.com/TonyKYC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={github}
+                  className={`ml-2 min-w-9 h-9 cursor-pointer ${
+                    hoveredIcon === 2 ? "mt-1" : ""
+                  }`}
+                  onMouseEnter={() => handleMouseToggle(2)}
+                  onMouseLeave={() => handleMouseToggle(null)}
+                  onClick={() =>
+                    toast.success("I am now only a developer on my own time.")
+                  }
+                  alt="Github Logo"
+                />
+              </a>
             </div>
           </div>
         </div>
