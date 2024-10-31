@@ -8,8 +8,12 @@ import { motion } from "framer-motion";
 
 const AboutMe = forwardRef((props, ref) => {
   return (
-    <section id="about" ref={ref} className="py-20 bg-white">
-      <div className="container px-4 mx-auto">
+    <section
+      id="about"
+      ref={ref}
+      className="flex justify-center py-20 bg-white"
+    >
+      <div className="container flex flex-col items-center px-4 mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

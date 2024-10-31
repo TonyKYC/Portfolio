@@ -5,8 +5,12 @@ import jobs from "../../constants/jobsData";
 
 const Jobs = forwardRef((props, ref) => {
   return (
-    <section id="projects" ref={ref} className="py-20 bg-gray-100">
-      <div className="container px-4 mx-auto">
+    <section
+      id="projects"
+      ref={ref}
+      className="flex justify-center py-20 mx-auto bg-gray-100"
+    >
+      <div className="container flex flex-col items-center px-4 mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
