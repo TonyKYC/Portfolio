@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 
 import ContactButton from "../../components/ContactButton";
 import CopyIcon from "../../components/ui/CopyIcon";
+import TechnicalAgileIcon from "../../components/ui/TechnicalAgileIcon";
+import ManagementIcon from "../../components/ui/ManagementIcon";
+import MetricsIcon from "../../components/ui/MetricsIcon";
 
 const AboutMe = forwardRef(({ contactRef }, ref) => {
   const [isEmailCopied, setEmailCopied] = useState(false);
@@ -32,7 +35,8 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
         />
         <div className="mb-1 text-center md:w-1/2">
           <h1 className="pb-2 text-4xl font-bold text-gray-700 font-rubik md:p-5">
-            Agile Coach & Developer
+            Agile Coach <span className="text-3xl">&</span>
+            <br /> Developer
           </h1>
 
           <SelfIntroduction />
@@ -69,45 +73,33 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
         </p>
         <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-3">
           <div className="p-6 bg-white rounded-lg shadow-md">
-            <img
-              src="icon-url-lightbulb"
-              alt="Product Design Icon"
-              className="w-12 h-12 mx-auto mb-4"
-            />
+            <TechnicalAgileIcon />
             <h3 className="text-lg font-semibold text-gray-800">
-              Product Design
+              Technical Agile Practices
             </h3>
             <p className="mt-2 text-gray-600">
-              Lorem ipsum dolor sit amet, solor adipicing elit. Non nisl solor
-              ut elementum turpis.
+              Proficient in Agile engineering practices like TDD, CI/CD, Git and
+              automated workflows.
             </p>
           </div>
           <div className="p-6 bg-white rounded-lg shadow-md">
-            <img
-              src="icon-url-pencil"
-              alt="UI/UX Design Icon"
-              className="w-12 h-12 mx-auto mb-4"
-            />
+            <ManagementIcon />
             <h3 className="text-lg font-semibold text-gray-800">
-              UI/UX Design
+              Management & Facilitation
             </h3>
             <p className="mt-2 text-gray-600">
-              Lorem ipsum dolor sit amet, solor adipicing elit. Non nisl solor
-              ut elementum turpis.
+              Experienced in orchestrating Agile ceremonies and leading
+              organizational transformations.
             </p>
           </div>
           <div className="p-6 bg-white rounded-lg shadow-md">
-            <img
-              src="icon-url-interactive"
-              alt="Interactive Design Icon"
-              className="w-12 h-12 mx-auto mb-4"
-            />
+            <MetricsIcon />
             <h3 className="text-lg font-semibold text-gray-800">
-              Interactive Design
+              Metrics-Driven
             </h3>
             <p className="mt-2 text-gray-600">
-              Lorem ipsum dolor sit amet, solor adipicing elit. Non nisl solor
-              ut elementum turpis.
+              Data-driven approach to performance optimization using Agile
+              metrics and analytics.
             </p>
           </div>
         </div>
