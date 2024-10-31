@@ -2,7 +2,6 @@ import agile from "/app/assets/images/agile.png";
 import developer from "/app/assets/images/developer.png";
 import efficiency from "/app/assets/images/efficiency.png";
 
-import Card from "../../components/Card";
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
 
@@ -11,7 +10,7 @@ const AboutMe = forwardRef((props, ref) => {
     <section
       id="about"
       ref={ref}
-      className="flex justify-center py-20 bg-white"
+      className="flex justify-center w-[90%] px-10 py-20 mx-auto bg-white"
     >
       <div className="container flex flex-col items-center px-4 mx-auto">
         <motion.h2

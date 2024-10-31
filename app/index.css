@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #root {
-  background-color: #000e23;
+  background: linear-gradient(to bottom, #000e23, #1f2937);
   width: 100vw;
   height: 100%;
 }

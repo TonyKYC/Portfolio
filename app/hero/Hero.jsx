@@ -33,7 +33,7 @@ const Hero = ({ aboutRef }) => {
       <motion.div
         initial={{ opacity: 0, y: -20, width: "100%" }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         className="absolute z-200000 top-[24%] left-0 right-0 ms-auto me-auto w-fit align-middle text-center bg-radial-custom"
       >
         <p className="text-[#438fff] font-square-peg text-[calc(1.5rem+1vw)]">

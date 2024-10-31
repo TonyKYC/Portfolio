@@ -1,7 +1,53 @@
 import { forwardRef } from "react";
+import { motion } from "framer-motion";
+import linkedin from "/app/assets/logo/linkedin-logo.png";
+import instagram from "/app/assets/logo/instagram-logo.png";
+import line from "/app/assets/logo/line-logo.png";
 
 const Footer = forwardRef((props, ref) => {
-  return <div ref={ref}>Footer</div>;
+  return (
+    <footer
+      ref={ref}
+      className="flex items-center justify-center py-8 mt-auto text-white"
+    >
+      <div className="container flex flex-col items-center px-4 mx-auto text-center">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
+          &copy; {new Date().getFullYear()} Anthony Abramo. All rights reserved.
+        </motion.p>
+        <div className="flex mt-4 space-x-4">
+          <motion.a
+            href="https://www.linkedin.com/in/anthony-abramo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            whileHover={{ scale: 1.1 }}
+          >
+            <img src={linkedin} className="w-8 h-8" alt="LinkedIn" />
+          </motion.a>
+          <motion.a
+            href="#"
+            aria-label="Line"
+            onClick={(e) => e.preventDefault()}
+            whileHover={{ scale: 1.1 }}
+          >
+            <img src={line} className="w-8 h-8" alt="Line" />
+          </motion.a>
+          <motion.a
+            href="#"
+            aria-label="Instagram"
+            onClick={(e) => e.preventDefault()}
+            whileHover={{ scale: 1.1 }}
+          >
+            <img src={instagram} className="w-8 h-8" alt="Instagram" />
+          </motion.a>
+        </div>
+      </div>
+    </footer>
+  );
 });
 
 export default Footer;

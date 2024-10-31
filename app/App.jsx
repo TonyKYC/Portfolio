@@ -5,7 +5,8 @@ import Hero from "./hero/Hero";
 import Banner from "./banner/Banner";
 import AboutMe from "./about-me/AboutMe";
 import Jobs from "./work/Jobs";
-import WorkProcess from "./work/WorkProcess";
+import WorkProcess from "./process/WorkProcess";
+import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
 
 export default function App() {
@@ -28,8 +29,9 @@ export default function App() {
       <Banner />
       <Jobs ref={expRef} />
       <Banner />
-      <WorkProcess ref={workRef} />
-      <Banner />
+      {/* <WorkProcess ref={workRef} />
+      <Banner /> */}
+      <Contact />
       <Footer ref={contactRef} />
     </>
   );

@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 
 const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
   const [isHovered, setIsHovered] = useState(Array(4).fill(false));
-  const [isHeaderVisible, setHeaderVisible] = useState(true);
   const headerRef = useRef(null);
 
   const navItems = useMemo(
