@@ -1,5 +1,5 @@
 import { useState } from "react";
-import avatar from "/app/assets/icons/avatar.png";
+import avatar from "/app/assets/images/avatar.png";
 
 const AvailableButton = ({ style }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -23,7 +23,7 @@ const AvailableButton = ({ style }) => {
       </span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute bottom-[2px] ml-5 md:ml-6 lg:ml-6 xl:ml-6 h-3 w-3 bg-green-500 rounded-full border-2 border-white"
+        className="absolute bottom-[7px] ml-5 md:ml-6 lg:ml-6 xl:ml-6 h-3 w-3 bg-green-500 rounded-full border-2 border-[#f0f0f0]"
         fill="currentColor"
         viewBox="0 0 24 24"
       />

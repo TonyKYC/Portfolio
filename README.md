@@ -14,7 +14,9 @@ Also, I am an Agile Coach and I have a passion for helping teams and individuals
 - **Styling**: Tailwind CSS, Shadcn UI, Radix UI, Framer-Motion
 - **State Management**: Zustand
 - **Schema Validation**: Zod
+- **Auth Management**: Clerk
 - **Testing**: Jest, React Testing Library
+- **UI/UX**: Figma
 - **Tools**: Git, GitHub, VSCode, Claude3.5
 
 ## Why Vite and not Next.js?
