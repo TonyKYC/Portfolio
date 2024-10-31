@@ -1,7 +1,45 @@
-import { motion } from "framer-motion";
+import React from "react";
+import { motion, useAnimation } from "framer-motion";
 import "../index.css";
 
-const Banner = () => {
+const logos = [
+  { src: "/assets/svg/javascript.svg", alt: "JavaScript" },
+  { src: "/assets/svg/typescript.svg", alt: "TypeScript" },
+  { src: "/assets/svg/html.svg", alt: "HTML" },
+  { src: "/assets/svg/css.svg", alt: "CSS" },
+  { src: "/assets/svg/react.svg", alt: "React" },
+  { src: "/assets/svg/next.svg", alt: "Next.js" },
+  { src: "/assets/svg/vite.svg", alt: "Vite" },
+  { src: "/assets/svg/tailwind.svg", alt: "Tailwind CSS" },
+  { src: "/assets/svg/jest.svg", alt: "Jest" },
+  { src: "/assets/svg/nodejs.svg", alt: "Node.js" },
+  { src: "/assets/svg/mongodb.svg", alt: "MongoDB" },
+  { src: "/assets/svg/vscode.svg", alt: "VSCode" },
+  { src: "/assets/svg/bun.svg", alt: "Bun" },
+  { src: "/assets/svg/docker.svg", alt: "Docker" },
+  { src: "/assets/svg/git.svg", alt: "Git" },
+  { src: "/assets/svg/gitlab.svg", alt: "GitLab" },
+  { src: "/assets/svg/github.svg", alt: "GitHub" },
+  { src: "/assets/svg/brew.svg", alt: "Brew" },
+  { src: "/assets/svg/jenkins.svg", alt: "Jenkins" },
+  { src: "/assets/svg/jira.svg", alt: "Jira" },
+  { src: "/assets/svg/json.svg", alt: "JSON" },
+  { src: "/assets/svg/mui.svg", alt: "MUI" },
+  { src: "/assets/svg/npm.svg", alt: "NPM" },
+  { src: "/assets/svg/stackoverflow.svg", alt: "Stack Overflow" },
+  { src: "/assets/svg/electron.svg", alt: "Electron" },
+  { src: "/assets/svg/babel.svg", alt: "Babel" },
+  { src: "/assets/svg/firebase.svg", alt: "Firebase" },
+  { src: "/assets/svg/sonarqube.svg", alt: "SonarQube" },
+];
+
+const Banner = React.memo(({ reverse = false }) => {
+  const controls = useAnimation();
+
+  React.useEffect(() => {
+    controls.start({ x: reverse ? "-100%" : "100%" });
+  }, [reverse, controls]);
+
   return (
     <>
       <div className="absolute flex flex-col items-center justify-center w-full h-16">
@@ -24,9 +62,11 @@ const Banner = () => {
       </div>
       <div className="relative flex items-center justify-center h-16 overflow-hidden md:h-20 lg:h-24">
         <motion.div
-          className="flex space-x-28 animate-scroll-logos"
-          initial={{ x: "100%" }}
-          animate={{ x: "-100%" }}
+          className={`flex space-x-28 ${
+            reverse ? "animate-scroll-logos-reverse" : "animate-scroll-logos"
+          }`}
+          initial={{ x: reverse ? "100%" : "-100%" }}
+          animate={controls}
           transition={{ duration: 1 }}
         >
           {logos.map((logo, index) => (
@@ -34,46 +74,16 @@ const Banner = () => {
               key={index}
               src={logo.src}
               alt={logo.alt}
-              width={40} // Adjust size as needed
-              height={5} // Adjust size as needed
+              width={40}
+              height={40}
               className="opacity-90 grayscale"
+              loading="lazy"
             />
           ))}
         </motion.div>
       </div>
     </>
   );
-};
+});
 
 export default Banner;
-
-const logos = [
-  { src: "/assets/svg/javascript.svg", alt: "JavaScript" },
-  { src: "/assets/svg/typescript.svg", alt: "TypeScript" },
-  { src: "/assets/svg/html.svg", alt: "HTML" },
-  { src: "/assets/svg/css.svg", alt: "CSS" },
-  { src: "/assets/svg/react.svg", alt: "React" },
-  { src: "/assets/svg/next.svg", alt: "Next.js" },
-  { src: "/assets/svg/vite.svg", alt: "Vite" },
-  { src: "/assets/svg/tailwind.svg", alt: "Tailwind CSS" },
-  { src: "/assets/svg/jest.svg", alt: "Jest" },
-  { src: "/assets/svg/nodejs.svg", alt: "nodejs" },
-  { src: "/assets/svg/mongodb.svg", alt: "mongodb" },
-  { src: "/assets/svg/vscode.svg", alt: "vscode" },
-  { src: "/assets/svg/bun.svg", alt: "bun" },
-  { src: "/assets/svg/docker.svg", alt: "docker" },
-  { src: "/assets/svg/git.svg", alt: "git" },
-  { src: "/assets/svg/gitlab.svg", alt: "gitlab" },
-  { src: "/assets/svg/github.svg", alt: "github" },
-  { src: "/assets/svg/brew.svg", alt: "brew" },
-  { src: "/assets/svg/jenkins.svg", alt: "jenkins" },
-  { src: "/assets/svg/jira.svg", alt: "jira" },
-  { src: "/assets/svg/json.svg", alt: "json" },
-  { src: "/assets/svg/mui.svg", alt: "mui" },
-  { src: "/assets/svg/npm.svg", alt: "npm" },
-  { src: "/assets/svg/stackoverflow.svg", alt: "stack-overflow" },
-  { src: "/assets/svg/electron.svg", alt: "electron" },
-  { src: "/assets/svg/babel.svg", alt: "babel" },
-  { src: "/assets/svg/firebase.svg", alt: "firebase" },
-  { src: "/assets/svg/sonarqube.svg", alt: "sonarqube" },
-];

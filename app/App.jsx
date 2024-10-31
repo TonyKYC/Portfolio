@@ -27,7 +27,7 @@ export default function App() {
       <Hero aboutRef={aboutRef} />
       <Banner />
       <AboutMe ref={aboutRef} contactRef={contactRef} />
-      <Banner />
+      <Banner reverse />
       <Jobs ref={expRef} />
       <Banner />
       <Contact />

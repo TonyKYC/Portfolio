@@ -49,6 +49,19 @@
   }
 }
 
+@keyframes scroll-logos-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .animate-scroll-logos {
-  animation: 120s linear infinite scroll-logos;
+  animation: 60s linear infinite scroll-logos;
+}
+
+.animate-scroll-logos-reverse {
+  animation: 60s linear infinite scroll-logos-reverse;
 }
