@@ -29,7 +29,7 @@ const Hero = ({ aboutRef }) => {
   };
 
   return (
-    <div className="w-[100vw] justify-center items-center rounded-b-[50px] h-[92.2vh] overflow-hidden bg-[#f6f6f6] md:max-h-[900px] lg:max-h-[900px]">
+    <div className="w-[100vw] justify-center items-center rounded-b-[50px] h-[90vh] md:h-[90vh] lg:h-[92.2vh] overflow-hidden bg-[#f6f6f6] md:max-h-[900px] lg:max-h-[900px]">
       <motion.div
         initial={{ opacity: 0, y: -20, width: "100%" }}
         animate={{ opacity: 1, y: 0 }}

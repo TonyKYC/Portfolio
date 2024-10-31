@@ -23,7 +23,7 @@ const Projetcs = forwardRef((props, ref) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mt-2 text-center text-gray-600 mb-14"
+          className="mt-2 text-center text-gray-600 mb-14 max-sm:p-5 max-sm:text-center"
         >
           Throughout my career, I have had the privilege of working on a diverse
           range of projects, from emerging startups to established global
@@ -31,7 +31,7 @@ const Projetcs = forwardRef((props, ref) => {
           <br /> Below is a curated selection of some of these endeavors.
         </motion.p>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-sm:p-5">
           {projects.map((project, index) => (
             <motion.div
               key={index}

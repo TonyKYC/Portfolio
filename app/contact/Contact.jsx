@@ -42,7 +42,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="flex justify-center py-20 bg-white">
+    <section
+      id="contact"
+      className="flex justify-center py-20 bg-white max-sm:p-10"
+    >
       <div className="container flex flex-col items-center px-4 mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -57,9 +60,9 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="max-w-lg mx-auto min-w-[600px]"
+          className="w-full max-w-lg"
         >
-          <div className="flex mb-4 space-x-4">
+          <div className="flex flex-col mb-4 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
             <div className="flex-1">
               <label
                 htmlFor="sender_company"
@@ -97,7 +100,7 @@ const Contact = () => {
               />
             </div>
           </div>
-          <div className="flex mb-4 space-x-4">
+          <div className="flex mb-4">
             <div className="flex-1">
               <label
                 htmlFor="sender_subject"

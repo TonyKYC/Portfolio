@@ -1,5 +1,5 @@
 import { forwardRef, useCallback, useState } from "react";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { motion } from "framer-motion";
 
 import ContactButton from "../../components/ContactButton";
@@ -20,22 +20,23 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center justify-center w-[75%] mx-auto min-h-screen px-4 py-12 rounded-[40px] bg-gray-50 scroll-mt-7"
+      className="flex flex-col items-center justify-center w-[75%] mx-auto px-4 py-12 rounded-[40px] bg-gray-50 scroll-mt-7"
     >
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="flex flex-col items-center w-full max-w-5xl p-2 lg:flex-row"
+        className="flex flex-col items-center w-full max-w-xl p-2 lg:flex-row"
       >
         <img
           src="/assets/me.jpeg"
           alt="Profile"
-          className="w-auto h-full mb-6 md:mb-0 md:mr-8 md:w-1/2"
+          className="w-auto h-full mb-6 md:mb-0 md:mr-8 md:w-1/2 max-sm:h-[200px] max-md:h-[300px]"
         />
-        <div className="mb-1 text-center md:w-1/2 min-w-[300px]">
-          <h1 className="pb-2 text-4xl font-bold text-gray-700 font-rubik md:p-5">
-            Agile Coach <span className="text-3xl">&</span>
+        <div className="mb-1 text-center md:w-3/4">
+          <h1 className="pb-2 text-4xl font-bold text-gray-700 font-rubik md:p-5 max-sm:text-center max-sm:text-xl">
+            Agile Coach{" "}
+            <span className="text-3xl max-sm:hidden max-lg:hidden">&</span>
             <br /> Developer
           </h1>
 
@@ -71,7 +72,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
           turn <br />
           efficiency ideas and processes into reality.
         </p>
-        <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="p-6 bg-white rounded-lg shadow-md">
             <TechnicalAgileIcon />
             <h3 className="text-lg font-semibold text-gray-800">
