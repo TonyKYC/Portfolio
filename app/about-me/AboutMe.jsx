@@ -26,17 +26,19 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="flex flex-col items-center w-full max-w-xl p-2 lg:flex-row"
+        className="flex flex-col items-center w-full max-w-5xl p-2 md:p-5 lg:flex-row"
       >
         <img
           src="/assets/me.jpeg"
           alt="Profile"
-          className="w-auto h-full mb-6 md:mb-0 md:mr-8 md:w-1/2 max-sm:h-[200px] max-md:h-[300px]"
+          className="w-auto h-full mb-6 md:mb-3 lg:mr-8 md:w-1/2 max-sm:h-[200px] max-md:h-[300px]"
         />
-        <div className="mb-1 text-center md:w-3/4">
-          <h1 className="pb-2 text-4xl font-bold text-gray-700 font-rubik md:p-5 max-sm:text-center max-sm:text-xl">
+        <div className="w-full mb-1 text-center md:w-3/4">
+          <h1 className="pb-2 text-4xl font-bold text-gray-700 font-rubik max-sm:text-center max-sm:text-xl max-md:text-2xl md:text-2xl">
             Agile Coach{" "}
-            <span className="text-3xl max-sm:hidden max-lg:hidden">&</span>
+            <span className="text-3xl max-sm:hidden max-lg:text-xl lg:text-xl">
+              &
+            </span>
             <br /> Developer
           </h1>
 
