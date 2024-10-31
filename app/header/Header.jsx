@@ -16,7 +16,7 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
   const navItems = useMemo(
     () => [
       { label: "About me", ref: aboutRef },
-      { label: "Experiences", ref: expRef },
+      { label: "Key Experiences", ref: expRef },
       { label: "Contact me", ref: contactRef },
     ],
     [aboutRef, expRef, workRef, contactRef]
@@ -96,12 +96,12 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
                 onMouseLeave={() => handleMouseToggle(1, false)}
                 onClick={() =>
                   toast.info(
-                    "Get in touch by email first, I'd be happy to give you my line after meeting."
+                    "Get in touch by email down below, we can exchange Lines after meeting."
                   )
                 }
                 aria-label="Line"
               />
-              <img
+              {/* <img
                 src={instagram}
                 className={`ml-2 min-w-10 h-10 cursor-pointer ${
                   isHovered[2] ? "mt-1" : ""
@@ -112,7 +112,7 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
                   toast.error("I don't post pictures of me, sorry.")
                 }
                 aria-label="Instagram"
-              />
+              /> */}
             </div>
           </div>
         </div>

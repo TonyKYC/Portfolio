@@ -33,7 +33,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
           alt="Profile"
           className="w-auto h-full mb-6 md:mb-0 md:mr-8 md:w-1/2"
         />
-        <div className="mb-1 text-center md:w-1/2">
+        <div className="mb-1 text-center md:w-1/2 min-w-[300px]">
           <h1 className="pb-2 text-4xl font-bold text-gray-700 font-rubik md:p-5">
             Agile Coach <span className="text-3xl">&</span>
             <br /> Developer
@@ -41,7 +41,6 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
 
           <SelfIntroduction />
           <div className="flex flex-row-reverse">
-            <Toaster richColors position="top-center" className="top-[10%]" />
             <ContactButton
               style={isEmailCopied ? "translate-y-1" : ""}
               variant="outlined"
@@ -79,8 +78,8 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
               Technical Agile Practices
             </h3>
             <p className="mt-2 text-gray-600">
-              Proficient in Agile engineering practices like TDD, CI/CD, Git and
-              automated workflows.
+              Proficient in Agile engineering practices, automated workflows and
+              scaled agility (SAFe).
             </p>
           </div>
           <div className="p-6 bg-white rounded-lg shadow-md">
