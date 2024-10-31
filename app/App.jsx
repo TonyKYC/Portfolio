@@ -4,7 +4,7 @@ import Header from "./header/Header";
 import Hero from "./hero/Hero";
 import Banner from "./banner/Banner";
 import AboutMe from "./about-me/AboutMe";
-import Jobs from "./work/Jobs";
+import Jobs from "./projects/Projects";
 import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
 
