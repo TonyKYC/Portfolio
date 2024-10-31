@@ -1,45 +1,46 @@
 import { forwardRef } from "react";
+import { motion } from "framer-motion";
 
-import Poster from "../../components/Poster";
 import jobs from "../../constants/jobsData";
 
 const Jobs = forwardRef((props, ref) => {
   return (
-    <div
-      ref={ref}
-      className="text-center bg-[#f7f7f8] w-full h-fit rounded-[50px] p-6"
-    >
-      <h2 className="text-[calc(1rem+.9vw)] text-3xl text-[#000e23] font-semibold mt-14 pb-5 tracking-wide">
-        Key Experiences
-      </h2>
-      <div className="mb-16">
-        <i>
-          {" "}
-          In order to{" "}
-          <span className="underline selection:bg-yellow-300 underline-offset-4 decoration-0">
-            respect various NDAs
-          </span>
-          , the pictures shown are the logo of the companies publically
-          available. <br />
-          No information about the projects/products are available online.
-        </i>
-      </div>
-      <div className="flex justify-center mb-6">
-        <div className="grid w-[70%]  gap-4 cursor-pointer xl:grid-cols-3 lg:grid-cols-2 max-sm:grid-col-1 md:grid-cols-2">
+    <section id="projects" ref={ref} className="py-20 bg-gray-100">
+      <div className="container px-4 mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-8 text-3xl font-bold text-center"
+        >
+          My Projects
+        </motion.h2>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {jobs.map((job, index) => (
-            <Poster
+            <motion.div
               key={index}
-              companyName={job.name}
-              companySummary={job.summary}
-              companyDetails={job.description}
-              year={job.year}
-              image={job.image}
-              imageAlt={job.imageAlt}
-            />
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="overflow-hidden bg-white rounded-lg shadow-md"
+            >
+              <img
+                src={job?.image}
+                alt={job?.imageAlt}
+                className="object-cover w-full h-48"
+              />
+              <div className="p-6">
+                <div className="flex flex-row items-center justify-between">
+                  <h3 className="mb-2 text-xl font-semibold">{job?.name}</h3>
+                  <p>{job.year}</p>
+                </div>
+                <p className="text-gray-600">{job?.description}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 });
 

@@ -8,6 +8,12 @@
   height: 100%;
 }
 
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 @layer base {
   @font-face {
     font-family: "Poppins";

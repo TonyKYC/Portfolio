@@ -11,8 +11,8 @@ const jobs = [
   {
     name: "Carrefour",
     year: "2023 - 2024",
-    summary: "Agile Coach implementing Scrum & SAFe,",
-    description: "RTE for 6 ARTs, Jira Admin, and coaching neophytes.",
+    description:
+      "Agile Coach implementing Scrum & SAFe, RTE for 6 ARTs, Jira Admin, and coaching neophytes.",
     image: carrefourLogo,
     imageAlt:
       "Icon by Paul J. - @www.freepik.com/icon/developer_9436966#fromView=search&page=1&position=30&uuid=dd4ec1f9-cb6a-4ce6-9a4b-22933d3504f5",
@@ -20,8 +20,8 @@ const jobs = [
   {
     name: "RAS Interim",
     year: "2022 - 2023",
-    summary: "Agile Coach: implemented Scrum/Kanban,",
-    description: "tailored training, Jira/Confluence, Agile ceremonies.",
+    description:
+      "Agile Coach: implemented Scrum/Kanban, tailored training, Jira/Confluence, Agile ceremonies.",
     image: rasLogo,
     imageAlt:
       "Icon by SBTS2018 - @https://www.freepik.com/icon/agile_6419083#fromView=search&page=1&position=72&uuid=799b70a4-4d8e-47ac-8535-4437d01ac1dc",
@@ -29,8 +29,8 @@ const jobs = [
   {
     name: "ZoL",
     year: "2022 - 2023",
-    summary: "Agile Coach: implemented Scrum/Kanban,",
-    description: "tailored training, Jira/Confluence, Agile ceremonies.",
+    description:
+      "gile Coach: implemented Scrum/Kanban, tailored training, Jira/Confluence, Agile ceremonies.",
     image: zolLogo,
     imageAlt:
       "Icon by SBTS2018 - @https://www.freepik.com/icon/agile_6419083#fromView=search&page=1&position=72&uuid=799b70a4-4d8e-47ac-8535-4437d01ac1dc",
@@ -38,8 +38,8 @@ const jobs = [
   {
     name: "Vivlio",
     year: "2021 - 2022",
-    summary: "Scrum Master: implemented Scrum/Kanban,",
-    description: "coaching, Jira/Confluence, multiple offshore teams.",
+    description:
+      "Scrum Master: implemented Scrum/Kanban, coaching, Jira/Confluence, multiple offshore teams.",
     image: vivlioLogo,
     imageAlt:
       "Icon by mikan933 - @https://www.freepik.com/icon/efficiency_8209963#fromView=search&page=2&position=89&uuid=4770b237-4080-4c91-b768-ea42cab59809",
@@ -47,8 +47,8 @@ const jobs = [
   {
     name: "Thales",
     year: "2019 - 2021",
-    summary: "Scrum Master/Software Engineer, led Agile team,",
-    description: "developed tools, enhanced CI, and ensured quality.",
+    description:
+      "Scrum Master/Software Engineer, led Agile team, developed tools, enhanced CI, and ensured quality.",
     image: thalesLogo,
     imageAlt:
       "Icon by mikan933 - @https://www.freepik.com/icon/efficiency_8209963#fromView=search&page=2&position=89&uuid=4770b237-4080-4c91-b768-ea42cab59809",
@@ -56,8 +56,8 @@ const jobs = [
   {
     name: "University of Kent",
     year: "2018 - 2019",
-    summary: "Master's thesis on translating sign language through",
-    description: "innovative haptic glove technology.",
+    description:
+      "Master's thesis on translating sign language through innovative haptic glove technology.",
     image: kentLogo,
     imageAlt:
       "Icon by mikan933 - @https://www.freepik.com/icon/efficiency_8209963#fromView=search&page=2&position=89&uuid=4770b237-4080-4c91-b768-ea42cab59809",
@@ -65,8 +65,8 @@ const jobs = [
   {
     name: "HEC Paris",
     year: "2017 - 2018",
-    summary: "HEC Paris is a top-tier business school renowned for",
-    description: " its excellence. Graduated in Digital Transformation.",
+    description:
+      "HEC Paris is a top-tier business school renowned for its excellence. Graduated in Digital Transformation.",
     image: hecLogo,
     imageAlt:
       "Icon by mikan933 - @https://www.freepik.com/icon/efficiency_8209963#fromView=search&page=2&position=89&uuid=4770b237-4080-4c91-b768-ea42cab59809",
@@ -74,8 +74,8 @@ const jobs = [
   {
     name: "EPITECH International",
     year: "2017 - 2018",
-    summary: '"The premier school of IT expertise and innovation".',
-    description: "Master Expert in Computer Science.",
+    description:
+      '"The premier school of IT expertise and innovation". Master Expert in Computer Science.',
     image: epitechLogo,
     imageAlt:
       "Icon by mikan933 - @https://www.freepik.com/icon/efficiency_8209963#fromView=search&page=2&position=89&uuid=4770b237-4080-4c91-b768-ea42cab59809",

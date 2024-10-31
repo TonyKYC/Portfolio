@@ -1,11 +1,11 @@
 import React from "react";
 
-const Arrow = () => {
+const ArrowIcon = ({ isHovered }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={`h-4 w-4 ml-[2px] transition-transform duration-200 ${
-        isHovered ? "translate-x-1" : ""
+        isHovered ? "translate-x-1 rotate-90" : ""
       } text-white`}
       fill="none"
       viewBox="0 0 24 24"
@@ -21,4 +21,4 @@ const Arrow = () => {
   );
 };
 
-export default Arrow;
+export default ArrowIcon;
