@@ -17,7 +17,6 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
     () => [
       { label: "About me", ref: aboutRef },
       { label: "Experiences", ref: expRef },
-      // { label: "How I work", ref: workRef },
       { label: "Contact me", ref: contactRef },
     ],
     [aboutRef, expRef, workRef, contactRef]

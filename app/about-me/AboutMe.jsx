@@ -26,7 +26,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
         className="flex flex-col items-center w-full max-w-5xl p-2 lg:flex-row"
       >
         <img
-          src="/app/assets/images/me.jpeg"
+          src="/assets/me.jpeg"
           alt="Profile"
           className="w-auto h-full mb-6 md:mb-0 md:mr-8 md:w-1/2"
         />
