@@ -6,7 +6,7 @@ const Banner = () => {
     <>
       <div className="absolute flex flex-col items-center justify-center w-full h-16">
         <motion.svg
-          className="relative z-10 mt-1 transform calc(translate-x-1/-15px) animate-bounce opacity-90"
+          className="relative z-10 mt-9 transform calc(translate-x-1/-15px) animate-bounce opacity-90"
           width="30"
           height="30"
           viewBox="0 0 24 24"
