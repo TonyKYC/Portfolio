@@ -1,7 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    sender_company: "",
+    sender_email: "",
+    sender_subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_EMAILJS_USER_ID
+      )
+      .then((response) => {
+        toast.success("Email sent successfully!");
+        setFormData({
+          sender_company: sender_company,
+          sender_email: sender_email,
+          sender_subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Failed to send email:", error);
+        toast.error("Failed to send email. Please try again later.");
+      });
+  };
+
   return (
     <section id="contact" className="flex justify-center py-20 bg-white">
       <div className="container flex flex-col items-center px-4 mx-auto">
@@ -9,7 +48,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-10 text-4xl font-bold text-center text-gray-700 font-rubik"
+          className="mb-8 text-3xl font-bold text-center"
         >
           Get in Touch
         </motion.h2>
@@ -17,59 +56,71 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          onSubmit={handleSubmit}
           className="max-w-lg mx-auto min-w-[600px]"
         >
           <div className="flex mb-4 space-x-4">
             <div className="flex-1">
               <label
-                htmlFor="company"
-                className="block mb-1 font-semibold text-gray-700 text-md"
+                htmlFor="sender_company"
+                className="block mb-2 font-bold text-gray-700"
               >
                 Company
               </label>
               <input
                 type="text"
-                id="company"
-                name="company"
+                id="sender_company"
+                name="sender_company"
+                autoComplete="organization"
+                value={formData.sender_company}
+                onChange={handleChange}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
             <div className="flex-1">
               <label
-                htmlFor="email"
-                className="block mb-1 font-semibold text-gray-700 text-md"
+                htmlFor="sender_email"
+                className="block mb-2 font-bold text-gray-700"
               >
                 Email
               </label>
               <input
-                type="text"
-                id="email"
-                name="email"
+                type="email"
+                id="sender_email"
+                name="sender_email"
+                autoComplete="email"
+                value={formData.sender_email}
+                onChange={handleChange}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
               />
             </div>
           </div>
           <div className="flex mb-4 space-x-4">
             <div className="flex-1">
               <label
-                htmlFor="subject"
-                className="block mb-1 font-semibold text-gray-700 text-md"
+                htmlFor="sender_subject"
+                className="block mb-2 font-bold text-gray-700"
               >
                 Subject
               </label>
               <input
                 type="text"
-                id="company"
-                name="company"
+                id="sender_subject"
+                name="sender_subject"
+                autoComplete="off"
+                value={formData.sender_subject}
+                onChange={handleChange}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
               />
             </div>
           </div>
           <div className="mb-4">
             <label
               htmlFor="message"
-              className="block mb-1 font-semibold text-gray-700 text-md"
+              className="block mb-2 font-bold text-gray-700"
             >
               Message
             </label>
@@ -77,6 +128,9 @@ const Contact = () => {
               id="message"
               name="message"
               rows={7}
+              autoComplete="off"
+              value={formData.message}
+              onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             ></textarea>
@@ -85,7 +139,7 @@ const Contact = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             type="submit"
-            className="px-6 py-3 text-lg font-semibold text-white transition duration-300 bg-blue-500 rounded-[10px] hover:bg-blue-600"
+            className="px-6 py-3 text-lg font-semibold text-white transition duration-300 bg-blue-500 rounded-full cursor-pointer hover:bg-blue-600"
           >
             Send Message
           </motion.button>
