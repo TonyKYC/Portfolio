@@ -15,10 +15,22 @@ const Projetcs = forwardRef((props, ref) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center text-gray-700 mb-14 font-rubik"
+          className="text-3xl font-bold text-center text-gray-700 font-rubik"
         >
           My Projects
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mt-2 text-center text-gray-600 mb-14"
+        >
+          Throughout my career, I have had the privilege of working on a diverse
+          range of projects, from emerging startups to established global
+          enterprises.
+          <br /> Below is a curated selection of some of these endeavors.
+        </motion.p>
+
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
@@ -31,7 +43,7 @@ const Projetcs = forwardRef((props, ref) => {
               <img
                 src={project?.image}
                 alt={project?.imageAlt}
-                className="object-cover h-48 mx-auto"
+                className="object-cover w-auto h-48 mx-auto"
               />
               <div className="p-6">
                 <div className="flex flex-row items-center justify-between">
