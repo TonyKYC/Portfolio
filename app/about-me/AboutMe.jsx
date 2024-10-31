@@ -40,7 +40,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
           </h1>
 
           <SelfIntroduction />
-          <div className="flex flex-row-reverse gap-2 mb-1">
+          <div className="flex flex-row-reverse">
             <Toaster richColors position="top-center" className="top-[10%]" />
             <ContactButton
               style={isEmailCopied ? "translate-y-1" : ""}
@@ -68,8 +68,9 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
           Specialities
         </h2>
         <p className="mt-2 text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non
-          nisl tincidunt ut elementum turpis.
+          Working hand-in-hand with teams to uncover opportunities in order to
+          turn <br />
+          efficiency ideas and processes into reality.
         </p>
         <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-3">
           <div className="p-6 bg-white rounded-lg shadow-md">
@@ -112,20 +113,20 @@ export default AboutMe;
 
 const SelfIntroduction = () => {
   return (
-    <div className="font-rubik text-xl text-[#000e23] font-[320] tracking-wide mb-4 max-sm:text-sm text-justify">
+    <div className="font-rubik text-lg text-[#000e23] font-[320] tracking-wide mb-4 max-sm:text-sm text-justify">
       <p>
         With a solid foundation in software development, I’ve had the
         opportunity to work in dynamic, fast-paced Agile environments.
       </p>
-      <div className="mt-3">
+      <p className="mt-3">
         I’m passionate about aligning with your specific needs and goals,
         leveraging my expertise to enhance tools, simplify workflows, and
         improve overall efficiency.
-      </div>
-      <div className="mt-3">
+      </p>
+      <p className="mt-3">
         My focus is always on driving results, whether it is through coaching
         teams or guiding management to unlock their full productivity potential.
-      </div>
+      </p>
     </div>
   );
 };
