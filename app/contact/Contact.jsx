@@ -21,23 +21,26 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_PROD_EMAILJS_SERVICE_ID ||
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_PROD_EMAILJS_TEMPLATE_ID ||
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formData,
-        import.meta.env.VITE_EMAILJS_USER_ID
+        import.meta.env.VITE_PROD_EMAILJS_USER_ID ||
+          import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then((response) => {
         toast.success("Email sent successfully!");
         setFormData({
-          sender_company: sender_company,
-          sender_email: sender_email,
+          sender_company: "",
+          sender_email: "",
           sender_subject: "",
           message: "",
         });
       })
       .catch((error) => {
-        console.error("Failed to send email:", error);
         toast.error("Failed to send email. Please try again later.");
+        console.error("Failed to send email:", error);
       });
   };
 
