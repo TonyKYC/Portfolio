@@ -8,14 +8,14 @@ const Jobs = forwardRef((props, ref) => {
     <section
       id="projects"
       ref={ref}
-      className="flex justify-center py-20 mx-auto bg-gray-100"
+      className="flex justify-center py-20 mx-auto bg-gray-100 rounded-[40px] scroll-mt-7"
     >
       <div className="container flex flex-col items-center px-4 mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-8 text-3xl font-bold text-center"
+          className="text-3xl font-bold text-center text-gray-700 mb-14 font-rubik"
         >
           My Projects
         </motion.h2>
