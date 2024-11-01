@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 import ContactButton from "../../components/ContactButton";
 import CopyIcon from "../../components/ui/CopyIcon";
-import TechnicalAgileIcon from "../../components/ui/TechnicalAgileIcon";
-import ManagementIcon from "../../components/ui/ManagementIcon";
-import MetricsIcon from "../../components/ui/MetricsIcon";
+
+import DownloadButton from "../../components/DownloadButton";
+import Expertise from "./Expertise";
 
 const AboutMe = forwardRef(({ contactRef }, ref) => {
   const [isEmailCopied, setEmailCopied] = useState(false);
@@ -43,7 +43,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
           </h1>
 
           <SelfIntroduction />
-          <div className="flex flex-row-reverse">
+          <div className="flex flex-row-reverse items-center">
             <ContactButton
               style={isEmailCopied ? "translate-y-1" : ""}
               variant="outlined"
@@ -56,57 +56,12 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
                 />
               }
             />
+            <DownloadButton />
           </div>
         </div>
       </motion.section>
 
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="w-full max-w-4xl mt-10 text-center"
-      >
-        <h2 className="text-2xl font-bold text-gray-700 font-rubik">
-          Specialities
-        </h2>
-        <p className="mt-2 text-gray-600">
-          Working hand-in-hand with teams to uncover opportunities in order to
-          turn <br />
-          efficiency ideas and processes into reality.
-        </p>
-        <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <TechnicalAgileIcon />
-            <h3 className="text-lg font-semibold text-gray-800">
-              Technical Agile Practices
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Proficient in Agile engineering practices, automated workflows and
-              scaled agility (SAFe).
-            </p>
-          </div>
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <ManagementIcon />
-            <h3 className="text-lg font-semibold text-gray-800">
-              Management & Facilitation
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Experienced in orchestrating Agile ceremonies and leading
-              organizational transformations.
-            </p>
-          </div>
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <MetricsIcon />
-            <h3 className="text-lg font-semibold text-gray-800">
-              Metrics-Driven
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Data-driven approach to performance optimization using Agile
-              metrics and analytics.
-            </p>
-          </div>
-        </div>
-      </motion.section>
+      <Expertise />
     </div>
   );
 });
@@ -115,7 +70,7 @@ export default AboutMe;
 
 const SelfIntroduction = () => {
   return (
-    <div className="font-rubik text-lg text-[#000e23] font-[320] tracking-wide mb-4 max-sm:text-sm text-justify">
+    <div className="text-lg text-[#000e23] font-[320] tracking-wide mb-4 max-sm:text-sm text-justify">
       <p>
         With a solid foundation in software development, I’ve had the
         opportunity to work in dynamic, fast-paced Agile environments.
