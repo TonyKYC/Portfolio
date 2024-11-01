@@ -73,7 +73,7 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
               >
                 <img
                   src={linkedin}
-                  className={`ml-2 min-w-[38px] h-[38px] border border-white rounded-lg cursor-pointer ${
+                  className={`ml-2 min-w-10 h-10 border border-white rounded-lg cursor-pointer ${
                     hoveredIcon === 0 ? "mt-1" : ""
                   }`}
                   onMouseEnter={() => handleMouseToggle(0)}
@@ -86,7 +86,7 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
               </a>
               <img
                 src={line}
-                className={`ml-2 min-w-9 h-9 cursor-pointer ${
+                className={`ml-2 min-w-10 h-10 cursor-pointer border border-white rounded-lg ${
                   hoveredIcon === 1 ? "mt-1" : ""
                 }`}
                 onMouseEnter={() => handleMouseToggle(1)}
@@ -105,7 +105,7 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
               >
                 <img
                   src={github}
-                  className={`ml-2 min-w-9 h-9 cursor-pointer ${
+                  className={`ml-2 min-w-10 h-10 cursor-pointer border border-white rounded-lg${
                     hoveredIcon === 2 ? "mt-1" : ""
                   }`}
                   onMouseEnter={() => handleMouseToggle(2)}

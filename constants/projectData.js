@@ -1,13 +1,13 @@
-import carrefourLogo from "/app/assets/logo/carrefour-logo.jpg";
-import rasLogo from "/app/assets/logo/ras-interim-logo.png";
-import zolLogo from "/app/assets/logo/zol-logo.jpeg";
-import vivlioLogo from "/app/assets/logo/vivlio-logo.webp";
-import thalesLogo from "/app/assets/logo/thales-logo.jpg";
-import kentLogo from "/app/assets/logo/kent-logo.jpg";
-import hecLogo from "/app/assets/logo/hec-logo.jpg";
-import epitechLogo from "/app/assets/logo/epitech-logo.jpg";
+import carrefourLogo from "/app/assets/covers/carrefour-cover.png";
+import rasLogo from "/app/assets/covers/ras-cover.png";
+import zolLogo from "/app/assets/covers/zol-cover.png";
+import vivlioLogo from "/app/assets/covers/vivlio-cover.png";
+import thalesLogo from "/app/assets/covers/thales-cover.png";
+import kentLogo from "/app/assets/covers/kent-cover.png";
+import hecLogo from "/app/assets/covers/hec-cover.png";
+import epitechLogo from "/app/assets/covers/epitech-cover.png";
 
-const jobs = [
+const projects = [
   {
     name: "Carrefour",
     year: "2023 - 2024",
@@ -41,7 +41,7 @@ const jobs = [
     imageAlt: "Vivlio logo",
   },
   {
-    name: "Thales",
+    name: "THALES",
     year: "2019 - 2021",
     description:
       "Scrum Master & Software Engineer: led Agile team, developed tools, enhanced CI, and ensured quality.",
@@ -74,4 +74,4 @@ const jobs = [
   },
 ];
 
-export default jobs;
+export default projects;
