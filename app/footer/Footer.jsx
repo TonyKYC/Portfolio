@@ -31,13 +31,14 @@ const Footer = forwardRef((props, ref) => {
             <img src={linkedin} className="w-8 h-8" alt="LinkedIn" />
           </motion.a>
           <motion.a
-            href="#"
+            href=""
             aria-label="Line"
-            onClick={() =>
+            onClick={(e) => {
+              e.preventDefault();
               toast.info(
                 "Get in touch by email down below, we can exchange Lines after meeting."
-              )
-            }
+              );
+            }}
             whileHover={{ scale: 1.1 }}
             className="border border-white rounded-lg"
           >
