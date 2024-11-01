@@ -65,7 +65,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
               />
               <button
                 onClick={toggleModal}
-                className="px-4 py-2 mr-2 text-white bg-blue-600 h-11 hover:bg-blue-700 rounded-xl"
+                className="px-4 py-2 mr-2 text-white bg-blue-600 h-11 hover:bg-blue-700 rounded-xl max-sm:hidden"
               >
                 View CV
               </button>{" "}

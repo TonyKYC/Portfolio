@@ -16,7 +16,7 @@ const CopyIcon = ({ onClick }) => (
       <path d="M9 21H5a2 2 0 01-2-2V7a2 2 0 012-2h4" />
       <rect x="9" y="9" width="10" height="10" rx="2" />
     </svg>
-    <p className="ml-1">Copy Email</p>
+    <p className="md:ml-1 lg:ml-2 max-sm:text-xs">Copy Email</p>
   </div>
 );
 
