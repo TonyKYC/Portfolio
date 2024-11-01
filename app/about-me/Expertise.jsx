@@ -10,11 +10,11 @@ const Expertise = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full max-w-4xl mt-1 text-center"
+      className="w-full max-w-4xl m-5 mb-2 text-center"
     >
       <h2 className="text-3xl font-bold text-gray-700 font-rubik">Expertise</h2>
       <p className="mt-2 text-gray-600 underline-offset-4 decoration-0">
-        I make
+        Helping
         <span className="p-1 leading-8 bg-green-200">
           your teams work <b>more efficiently</b> using <u>Agility</u>
         </span>

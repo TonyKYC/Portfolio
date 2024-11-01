@@ -26,7 +26,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center justify-center w-[75%] mx-auto px-4 py-12 rounded-[40px] bg-gray-50 scroll-mt-7"
+      className="flex flex-col items-center justify-center w-full mx-auto px-4 py-12 rounded-[40px] bg-gray-50"
     >
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -95,13 +95,13 @@ const SelfIntroduction = () => {
         opportunity to work in dynamic, fast-paced Agile environments.
       </p>
       <p className="mt-3">
-        I’m passionate about aligning with your specific needs and goals,
-        leveraging my expertise to enhance tools, simplify workflows, and
-        improve overall efficiency.
+        Aligning my expertise with your specific needs and goals, I leverage my
+        experience to enhance tools, simplify workflows, and improve overall
+        efficiency.
       </p>
       <p className="mt-3">
-        My focus is always on driving results, whether it is through coaching
-        teams or guiding management to unlock their full productivity potential.
+        Focusing on driving results, whether it is through coaching teams or
+        guiding management to unlock their full productivity potential.
       </p>
     </div>
   );
