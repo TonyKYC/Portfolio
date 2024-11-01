@@ -1,4 +1,4 @@
-import { forwardRef, useCallback, useState, useMemo } from "react";
+import { forwardRef, useCallback, useState } from "react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 
@@ -13,15 +13,15 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
   const [isEmailCopied, setEmailCopied] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
 
-  const email = useMemo(() => "anthony.abramo.pro@gmail.com", []);
-
   const handleCopyEmail = useCallback(() => {
     setEmailCopied(true);
-    navigator.clipboard.writeText(email);
+    navigator.clipboard.writeText("anthony.abramo.pro@gmail.com");
     setTimeout(() => setEmailCopied(false), 100);
-  }, [email]);
+  }, []);
 
-  const toggleModal = () => setModalOpen((prev) => !prev);
+  const toggleModal = () => {
+    setModalOpen((prev) => !prev);
+  };
 
   return (
     <div
@@ -32,7 +32,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="flex flex-col items-center w-full max-w-5xl p-2 md:p-5 lg:flex-row max-h-[550px]"
+        className="flex flex-col items-center w-full max-w-5xl p-2 md:p-5 lg:flex-row lg:max-h-[550px]"
       >
         <img
           src="/assets/me.jpeg"
@@ -68,7 +68,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
                 className="px-4 py-2 mr-2 text-white bg-blue-600 h-11 hover:bg-blue-700 rounded-xl"
               >
                 View CV
-              </button>
+              </button>{" "}
               <DownloadButton />
             </div>
           </div>
