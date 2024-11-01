@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import linkedin from "/app/assets/logo/linkedin-logo.png";
 import github from "/app/assets/logo/github-logo.png";
 import line from "/app/assets/logo/line-logo.png";
+import { toast } from "sonner";
 
 const Footer = forwardRef((props, ref) => {
   return (
@@ -32,7 +33,11 @@ const Footer = forwardRef((props, ref) => {
           <motion.a
             href="#"
             aria-label="Line"
-            onClick={(e) => e.preventDefault()}
+            onClick={() =>
+              toast.info(
+                "Get in touch by email down below, we can exchange Lines after meeting."
+              )
+            }
             whileHover={{ scale: 1.1 }}
             className="border border-white rounded-lg"
           >
