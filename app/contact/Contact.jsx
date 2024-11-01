@@ -44,7 +44,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex justify-center py-20 bg-white max-sm:p-10"
+      className="flex justify-center py-20 bg-white rounded-t-[40px] max-sm:p-10"
     >
       <div className="container flex flex-col items-center px-4 mx-auto">
         <motion.h2

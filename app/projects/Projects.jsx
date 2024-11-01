@@ -38,7 +38,7 @@ const Projetcs = forwardRef((props, ref) => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="overflow-hidden bg-white rounded-lg shadow-md max-w-[490px]"
+              className="overflow-hidden bg-white  shadow-md max-w-[490px] rounded-[15px]"
             >
               <img
                 src={project?.image}
