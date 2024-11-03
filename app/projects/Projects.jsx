@@ -46,11 +46,9 @@ const Projetcs = forwardRef((props, ref) => {
                 className="object-cover w-auto h-48 mx-auto"
               />
               <div className="p-6">
-                <div className="flex flex-row items-center justify-between">
-                  <h3 className="mb-2 text-xl font-semibold">
-                    {project?.name}
-                  </h3>
-                  <p>{project?.year}</p>
+                <div className="flex flex-row items-center justify-between mb-2">
+                  <h3 className="text-lg font-semibold ">{project?.name}</h3>
+                  <p className="text-sm">{project?.year}</p>
                 </div>
                 <p className="text-gray-600">{project?.description}</p>
               </div>

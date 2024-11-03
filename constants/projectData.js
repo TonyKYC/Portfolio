@@ -9,66 +9,66 @@ import epitechLogo from "/app/assets/covers/epitech-cover.png";
 
 const projects = [
   {
-    name: "Carrefour",
+    name: "Agile Coach",
     year: "2023 - 2024",
     description:
-      "Agile Coach: implementing Scrum & SAFe, RTE for 6 ARTs, Jira Admin, and coaching neophytes.",
+      "Scrum, Kanban and SAFe • RTE for 6 ARTs • Jira Admin • Coaching newcomers to agility.",
     image: carrefourLogo,
     imageAlt: "Carrefour logo",
   },
   {
-    name: "RAS Interim",
+    name: "Agile Coach",
     year: "2022 - 2023",
     description:
-      "Agile Coach: implemented Scrum & Kanban, tailored training, Jira (Atlassian), Agile ceremonies.",
+      "Scrum, Kanban and SAFe • Tailored training • Jira Expertise • Agile ceremonies.",
     image: rasLogo,
     imageAlt: "RAS Interim logo",
   },
   {
-    name: "ZoL",
+    name: "Agile Coach",
     year: "2022 - 2023",
     description:
-      "Agile Coach: implemented Scrum & Kanban, tailored training, Jira (Atlassian), Agile ceremonies.",
+      "Scrum, Kanban and SAFe • Tailored training • Jira Expertise • Agile ceremonies.",
     image: zolLogo,
     imageAlt: "ZoL logo",
   },
   {
-    name: "Vivlio",
+    name: "Scrum Master",
     year: "2021 - 2022",
     description:
-      "Scrum Master: implemented Scrum & Kanban, coaching, Jira (Atlassian), multiple offshore teams.",
+      "Scrum, Kanban • Coaching agility to newcomers • Jira Expertise • Multiple offshore teams.",
     image: vivlioLogo,
     imageAlt: "Vivlio logo",
   },
   {
-    name: "THALES",
+    name: "Software Engineer",
     year: "2019 - 2021",
     description:
-      "Scrum Master & Software Engineer: led Agile team, developed tools, enhanced CI, and ensured quality.",
+      "Introduced Agility within new team • Developed internal tools • Enhanced CI • Ensured quality.",
     image: thalesLogo,
     imageAlt: "Thales logo",
   },
   {
-    name: "University of Kent",
+    name: "Master's Thesis",
     year: "2018 - 2019",
     description:
-      "Master's thesis on translating sign language through innovative haptic glove technology.",
+      "Developed innovative haptic glove technology softwarefor translating sign language • Python.",
     image: kentLogo,
     imageAlt: "University of Kent logo",
   },
   {
-    name: "HEC Paris",
+    name: "Digital Transformation",
     year: "2017 - 2018",
     description:
-      "HEC Paris is a top-tier business school renowned for its excellence. Graduated in Digital Transformation.",
+      "HEC Paris is a top-tier business school renowned for its excellence • Graduated in Digital Transformation.",
     image: hecLogo,
     imageAlt: "HEC Paris logo",
   },
   {
-    name: "EPITECH International",
+    name: "Software Engineer",
     year: "2017 - 2018",
     description:
-      '"The premier school of IT expertise and innovation". Master Expert in Computer Science.',
+      '"The premier school of IT expertise and innovation" • Master Expert in Computer Science.',
     image: epitechLogo,
     imageAlt: "EPITECH International logo",
   },
