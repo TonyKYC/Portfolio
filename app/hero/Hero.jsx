@@ -39,7 +39,7 @@ const Hero = ({ aboutRef }) => {
         <p className="text-[#438fff] font-square-peg text-[calc(1.5rem+1vw)] max-sm:text-[calc(1.5rem+0.5vw)]">
           Mastering agility, optimizing efficiency
         </p>
-        <h1 className="font-rubik text-[calc(1.1rem+3.9vw)] max-sm:text-3xl font-[600] leading-tight z-50">
+        <h1 className="font-rubik text-3xl md:text-[calc(1.1rem+3.9vw)] lg:text-[calc(1.1rem+3.9vw)] font-[600] leading-tight z-50">
           Harnessing Agility for
           <br />
           Efficient Product Delivery
