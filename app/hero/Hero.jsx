@@ -50,7 +50,7 @@ const Hero = ({ aboutRef }) => {
             background: linear-gradient(to top, #439051, #042350 30%, #002c6d);
             -webkit-background-clip: text;
             color: transparent;
-            text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
           }
         `}</style>
         <div className="flex flex-col justify-center items-center font-rubik text-xl text-[#000e23] font-[350] pt-3 tracking-wide">
