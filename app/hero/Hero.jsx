@@ -52,6 +52,12 @@ const Hero = ({ aboutRef }) => {
             color: transparent;
             text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
           }
+          @media (max-width: 640px) {
+            /* Adjust the breakpoint as needed */
+            h1 {
+              text-shadow: none; /* Remove text-shadow for small screens */
+            }
+          }
         `}</style>
         <div className="flex flex-col justify-center items-center font-rubik text-xl text-[#000e23] font-[350] pt-3 tracking-wide">
           <p>Hi! I&apos;m Anthony, an efficiency virtuoso.</p>
