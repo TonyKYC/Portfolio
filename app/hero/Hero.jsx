@@ -39,11 +39,20 @@ const Hero = ({ aboutRef }) => {
         <p className="text-[#438fff] font-square-peg text-[calc(1.5rem+1vw)] max-sm:text-[calc(1.5rem+0.5vw)]">
           Mastering agility, optimizing efficiency
         </p>
-        <h1 className="font-rubik text-[calc(1.1rem+3.9vw)] max-sm:text-[calc(1.1rem+2.9vw)] font-[600] leading-tight bg-gradient-to-t from-[#439051] via-[#042350] via-30% to-[#002c6d] inline-block text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.2)] z-50">
+        <h1 className="font-rubik text-[calc(1.1rem+3.9vw)] max-sm:text-[calc(1.1rem+2.9vw)] font-[600] leading-tight z-50">
           Harnessing Agility for
           <br />
           Efficient Product Delivery
         </h1>
+        {/* Apply gradient and shadow styles after initial render */}
+        <style jsx>{`
+          h1 {
+            background: linear-gradient(to top, #439051, #042350 30%, #002c6d);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          }
+        `}</style>
         <div className="flex flex-col justify-center items-center font-rubik text-xl text-[#000e23] font-[350] pt-3 tracking-wide">
           <p>Hi! I&apos;m Anthony, an efficiency virtuoso.</p>
           <div className="flex flex-row justify-around gap-3 mt-7">
