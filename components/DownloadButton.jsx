@@ -3,7 +3,7 @@ import React from "react";
 const DownloadButton = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/assets/cv/Anthony_ABRAMO_CV_2024_Eng.pdf";
+    link.href = "/assets/cv/Anthony_ABRAMO_CV_2025_Eng.pdf";
     link.download = "Anthony_ABRAMO_CV.pdf";
     document.body.appendChild(link);
     link.click();
