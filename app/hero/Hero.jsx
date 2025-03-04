@@ -11,6 +11,7 @@ import "../index.css";
 const Hero = ({ aboutRef }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isEmailCopied, setEmailCopied] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   const handleCopyEmail = useCallback(() => {
     setEmailCopied(true);
@@ -27,6 +28,11 @@ const Hero = ({ aboutRef }) => {
       });
     }
   };
+
+  const toggleModal = () => {
+    setModalOpen((prev) => !prev);
+  };
+
 
   return (
     <div className="w-[100vw] justify-center items-center rounded-b-[50px] h-[90vh] md:h-[90vh] lg:h-[92.2vh] overflow-hidden bg-[#f6f6f6] md:max-h-[900px] lg:max-h-[900px]">
@@ -67,7 +73,7 @@ const Hero = ({ aboutRef }) => {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              <button onClick={handleClickAbout}>Learn More</button>
+              <button onClick={handleClickAbout}>Curriculum Vitae</button>
               <ArrowIcon isHovered={isHovered} />
             </div>
             <div>
@@ -83,6 +89,11 @@ const Hero = ({ aboutRef }) => {
                     }}
                   />
                 }
+              />
+              <CVModal
+                isOpen={isModalOpen}
+                onClose={toggleModal}
+                onOpen={toggleModal}
               />
             </div>
           </div>
