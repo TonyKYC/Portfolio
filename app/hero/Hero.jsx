@@ -74,7 +74,7 @@ const Hero = ({ aboutRef }) => {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              <button onClick={handleClickAbout}>Curriculum Vitae</button>
+              <button onClick={toggleModal}>Curriculum Vitae</button>
               <ArrowIcon isHovered={isHovered} />
             </div>
             <div>
