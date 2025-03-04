@@ -44,7 +44,7 @@ const CVModal = ({ isOpen, onClose }) => {
         </div>
         <h2 className="mb-4 text-2xl font-bold">Curriculum Vitae</h2>
         <iframe
-          src="/assets/cv/Anthony_ABRAMO_CV_2025_Eng.pdf"
+          src="/assets/cv/CV_ANTHONY_ABRAMO_2025_TW.pdf"
           className="w-full h-[90%] border-0"
           title="CV"
         />
