@@ -7,7 +7,7 @@ import CopyIcon from "../../components/ui/CopyIcon";
 import DownloadButton from "../../components/DownloadButton";
 
 import Expertise from "./Expertise";
-import CVModal from "./CVModal";
+import CVModal from "../hero/CVModal";
 
 const AboutMe = forwardRef(({ contactRef }, ref) => {
   const [isEmailCopied, setEmailCopied] = useState(false);
