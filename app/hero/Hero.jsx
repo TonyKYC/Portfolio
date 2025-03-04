@@ -5,6 +5,7 @@ import { Toaster, toast } from "sonner";
 import CopyIcon from "../../components/ui/CopyIcon";
 import ArrowIcon from "../../components/ui/ArrowIcon";
 import ContactButton from "../../components/ContactButton";
+import CVModal from "./CVModal";
 
 import "../index.css";
 
