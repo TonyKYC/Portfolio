@@ -91,17 +91,16 @@ const SelfIntroduction = () => {
   return (
     <div className="text-lg text-[#000e23] font-[320] tracking-wide mb-4 max-sm:text-sm text-justify">
       <p>
-        With a solid foundation in software development, I’ve had the
-        opportunity to work in dynamic, fast-paced Agile environments.
+        Agile Coach and Project/Product Manager with 6+ years of experience
+        driving team efficiency and product delivery. Combines strategic
+        guidance and process optimization with hands-on coding expertise in
+        React and Next.js.
       </p>
       <p className="mt-3">
-        Aligning my expertise with your specific needs and goals, I leverage my
-        experience to enhance tools, simplify workflows, and improve overall
-        efficiency.
-      </p>
-      <p className="mt-3">
-        Focusing on driving results, whether it is through coaching teams or
-        guiding management to unlock their full productivity potential.
+        Integrates AI-powered automation to streamline workflows and elevate
+        productivity. Possesses a unique blend of leadership and technical
+        skills, enabling effective strategy execution and direct contribution to
+        development.
       </p>
     </div>
   );

@@ -1,3 +1,4 @@
+import renwuLogo from "/app/assets/covers/renwu-cover.png";
 import carrefourLogo from "/app/assets/covers/carrefour-cover.png";
 import rasLogo from "/app/assets/covers/ras-cover.png";
 import zolLogo from "/app/assets/covers/zol-cover.png";
@@ -8,6 +9,14 @@ import hecLogo from "/app/assets/covers/hec-cover.png";
 import epitechLogo from "/app/assets/covers/epitech-cover.png";
 
 const projects = [
+  {
+    name: "Founder & CEO",
+    year: "2025 - Present",
+    description:
+      "World's first autonomous AI-powered platform for project management.",
+    image: renwuLogo,
+    imageAlt: "Renwu logo",
+  },
   {
     name: "Agile Coach",
     year: "2023 - 2024",

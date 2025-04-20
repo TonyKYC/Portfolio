@@ -111,7 +111,7 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
                   onMouseEnter={() => handleMouseToggle(2)}
                   onMouseLeave={() => handleMouseToggle(null)}
                   onClick={() =>
-                    toast.success("I am now only a developer on my own time.")
+                    toast.success("I develop daily on my own time.")
                   }
                   alt="Github Logo"
                 />
