@@ -10,7 +10,7 @@ import epitechLogo from "/app/assets/covers/epitech-cover.png";
 
 const projects = [
   {
-    name: "Founder & CEO",
+    name: "Founder & Fullstack Developer",
     year: "2025 - Present",
     description:
       "World's first autonomous AI-powered platform for project management.",
