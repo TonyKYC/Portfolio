@@ -1,5 +1,5 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { forwardRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 import projects from "../../constants/projectData";
 
@@ -37,6 +37,10 @@ const Projects = forwardRef((props, ref) => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
+              initial={
+                selectedProject === null && { opacity: 0, y: 20, duration: 0.5 }
+              }
+              whileInView={selectedProject === null && { opacity: 1, y: 0 }}
               layoutId={`project-${index}`}
               onClick={() => setSelectedProject(project)}
               className="h-full overflow-hidden bg-white shadow-md cursor-pointer hover:shadow-lg rounded-2xl"

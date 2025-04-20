@@ -1,13 +1,13 @@
+import { motion } from "framer-motion";
 import { forwardRef, useCallback, useState } from "react";
 import { toast } from "sonner";
-import { motion } from "framer-motion";
 
 import ContactButton from "../../components/ContactButton";
-import CopyIcon from "../../components/ui/CopyIcon";
 import DownloadButton from "../../components/DownloadButton";
+import CopyIcon from "../../components/ui/CopyIcon";
 
-import Expertise from "./Expertise";
 import CVModal from "../hero/CVModal";
+import Expertise from "./Expertise";
 
 const AboutMe = forwardRef(({ contactRef }, ref) => {
   const [isEmailCopied, setEmailCopied] = useState(false);
@@ -32,23 +32,24 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="flex flex-col items-center w-full max-w-5xl p-2 md:p-5 lg:flex-row lg:max-h-[550px]"
+        className="flex flex-col items-center w-full max-w-6xl p-2 md:p-5 lg:flex-row lg:max-h-[550px]"
       >
         <img
           src="/assets/me.jpeg"
           alt="Profile"
           className="w-auto h-full mb-6 md:mb-3 lg:mr-8 md:w-1/2 max-sm:h-[200px] max-md:h-[300px]"
         />
-        <div className="flex flex-col justify-between w-full h-full mb-1 text-center md:w-3/4">
+        <div className="flex flex-col justify-between w-full h-full mb-1 space-y-8 text-center md:w-3/4">
           <h1 className="pb-2 text-4xl font-bold text-gray-700 font-rubik max-sm:text-center max-sm:text-xl max-md:text-2xl md:text-2xl lg:text-4xl">
             Agile Coach{" "}
             <span className="text-3xl max-sm:text-md max-lg:text-xl lg:text-2xl">
               ,
             </span>
-            <br /> Developer
+            <br /> Fullstack Developer
           </h1>
 
           <SelfIntroduction />
+
           <div className="flex flex-col justify-between h-full">
             <div className="flex flex-row-reverse items-center justify-end">
               <ContactButton
@@ -94,7 +95,7 @@ const SelfIntroduction = () => {
         Agile Coach and Project/Product Manager with 6+ years of experience
         driving team efficiency and product delivery. Combines strategic
         guidance and process optimization with hands-on coding expertise in
-        React and Next.js.
+        ReactJS (web ecosystem).
       </p>
       <p className="mt-3">
         Integrates AI-powered automation to streamline workflows and elevate

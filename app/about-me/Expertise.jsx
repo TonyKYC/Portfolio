@@ -1,8 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
-import TechnicalAgileIcon from "../../components/ui/TechnicalAgileIcon";
+import React from "react";
 import ManagementIcon from "../../components/ui/ManagementIcon";
 import MetricsIcon from "../../components/ui/MetricsIcon";
+import TechnicalAgileIcon from "../../components/ui/TechnicalAgileIcon";
 
 const Expertise = () => {
   return (
@@ -10,7 +10,7 @@ const Expertise = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full max-w-4xl m-5 mb-2 text-center"
+      className="w-full max-w-4xl m-5 mb-2 space-y-10 text-center mt-14"
     >
       <h2 className="text-3xl font-bold text-gray-700 font-rubik">Expertise</h2>
       <p className="mt-2 text-gray-600 underline-offset-4 decoration-0">
