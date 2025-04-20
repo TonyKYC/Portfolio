@@ -58,7 +58,7 @@ const projects = [
     imageAlt: "Thales logo",
   },
   {
-    name: "Master's Thesis",
+    name: "Master in Computer Science",
     year: "2018 - 2019",
     description:
       "Developed innovative haptic glove technology softwarefor translating sign language • Python.",
@@ -66,16 +66,16 @@ const projects = [
     imageAlt: "University of Kent logo",
   },
   {
-    name: "Digital Transformation",
-    year: "2017 - 2018",
+    name: "Certificate - Digital Transformation",
+    year: "2017",
     description:
       "HEC Paris is a top-tier business school renowned for its excellence • Graduated in Digital Transformation.",
     image: hecLogo,
     imageAlt: "HEC Paris logo",
   },
   {
-    name: "Software Engineer",
-    year: "2017 - 2018",
+    name: "Master in Computer Science",
+    year: "2015 - 2019",
     description:
       '"The premier school of IT expertise and innovation" • Master Expert in Computer Science.',
     image: epitechLogo,

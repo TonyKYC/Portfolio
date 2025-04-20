@@ -15,12 +15,20 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
 
   const navItems = useMemo(
     () => [
+      { label: "Home", ref: "home" },
       { label: "About me", ref: aboutRef },
       { label: "Key Experiences", ref: expRef },
       { label: "Contact me", ref: contactRef },
     ],
     [aboutRef, expRef, contactRef]
   );
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const handleMouseToggle = useCallback((index) => {
     setHoveredIcon(index);
@@ -32,7 +40,9 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
   }, []);
 
   const handleClick = useCallback((ref) => {
-    if (ref.current) {
+    if (ref === "home") {
+      scrollToTop();
+    } else if (ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, []);
@@ -46,10 +56,15 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
         className="top-0 right-0 left-0 z-[100] max-h-[70px] py-2 px-4 scroll-mb-0 fixed backdrop-blur-[12px] bg-[rgba(255,255,255,.7)]"
       >
         <div className="flex flex-row items-center justify-between lg:justify-between font-extralight max-w-[100vw]">
-          <button onClick={handleClickLogo} aria-label="Go to top">
-            <img src={logo} alt="Logo" className="h-10 min-w-8" />
-          </button>
-          <div className="flex max-md:hidden">
+          <div className="flex items-center">
+            <button onClick={handleClickLogo} aria-label="Go to top">
+              <img src={logo} alt="Logo" className="h-10 min-w-8" />
+            </button>
+            <div className="ml-4">
+              <AvailableButton />
+            </div>
+          </div>
+          <div className="absolute flex transform -translate-x-1/2 max-md:hidden left-1/2">
             {navItems.map((item, index) => (
               <button
                 key={index}
@@ -64,7 +79,6 @@ const Header = ({ aboutRef, expRef, workRef, contactRef }) => {
           </div>
           <div className="flex items-center w-auto">
             <div className="flex items-center justify-center">
-              <AvailableButton />
               <div className="sm:hidden"></div>
               <a
                 href="https://www.linkedin.com/in/anthony-abramo/"

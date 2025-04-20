@@ -15,11 +15,11 @@ const AvailableButton = ({ style }) => {
       <img
         src={avatar}
         alt="avatar"
-        className="h-auto py-2 mr-2 w-7 md:w-8 lg:w-8"
+        className="h-auto py-2 lg:mr-2 w-7 md:w-8 lg:w-8"
       />
       <span className="pt-1 pl-1 text-xs font-normal text-center md:text-sm lg:text-base font-rubik">
         <span className="hidden lg:inline">Available for work</span>
-        <span className="inline lg:hidden">Available</span>
+        <span className="inline lg:hidden"></span>
       </span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
