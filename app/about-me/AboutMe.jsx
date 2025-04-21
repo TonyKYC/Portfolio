@@ -44,7 +44,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
             <img
               src="/assets/me.jpeg"
               alt="Profile"
-              className="object-cover w-full h-full transition-transform duration-300 md:max-h-[500px] lg:max-h-[600px] hover:scale-105"
+              className="object-cover w-full h-full transition-transform duration-300 md:max-h-[500px] lg:max-h-[650px] hover:scale-105"
               style={{ aspectRatio: "3/4" }}
             />
           </div>
@@ -121,16 +121,17 @@ const SelfIntroduction = () => {
   return (
     <div className="space-y-2 text-lg leading-relaxed text-gray-600">
       <p>
-        Agile Coach and Project/Product Manager with 6+ years of experience
-        driving team efficiency and product delivery. Combines strategic
-        guidance and process optimization with hands-on coding expertise in
-        ReactJS (web ecosystem).
+        Agile Coach and Software Engineer with 8+ years of experience,
+        specializing in scaled agile transformations and technical leadership.
+        Expert in implementing SAFe, Scrum, and Kanban across large
+        organizations while maintaining hands-on development expertise in React
+        and the modern web ecosystem.
       </p>
       <p>
-        Integrates AI-powered automation to streamline workflows and elevate
-        productivity. Possesses a unique blend of leadership and technical
-        skills, enabling effective strategy execution and direct contribution to
-        development.
+        Currently founding RENWU, an AI-powered project management platform,
+        while bringing extensive experience from leading transformations at
+        major enterprises like Carrefour, where I orchestrated SAFe
+        implementation for 250+ people across 20 teams.
       </p>
     </div>
   );

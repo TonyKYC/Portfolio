@@ -23,7 +23,7 @@ const Expertise = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-3/4 mx-auto space-y-12"
+      className="w-5/6 mx-auto space-y-12"
     >
       <div className="text-center">
         <h2 className="mb-4 text-3xl font-bold text-gray-800 font-rubik">
@@ -31,16 +31,25 @@ const Expertise = () => {
         </h2>
         <div className="max-w-3xl mx-auto">
           <p className="text-lg leading-relaxed text-gray-600">
-            Helping{" "}
+            Bridging
             <span className="px-2 py-1 text-green-800 bg-green-100 rounded-md">
-              your teams work <strong>more efficiently</strong> using{" "}
-              <u>Agility</u>
+              technical excellence with{" "}
+              <strong>organizational transformation</strong> through{" "}
+              <u>scaled agility</u>
             </span>{" "}
-            through Scrum, Kanban, SAFe or custom framework.
-            <br className="md:hidden" /> Including{" "}
-            <span className="px-2 py-1 rounded-md bg-amber-100 text-amber-800">
-              tools, <u>workflows</u>, <u>communication</u> and <u>processes</u>
+            <br />
+            from startups to world-class enterprises.
+            <br className="md:hidden" /> Specializing in{" "}
+            <span className="px-0 py-1 rounded-md bg-amber-100 text-amber-800">
+              <u>SAFe</u>
+              <span className="py-1 bg-white">, </span>
+              <u>Scrum/Kanban </u>
+              <span className="py-1 bg-white">, </span>
+              <u> AI integration</u>
+              <span className="py-1 bg-white"> and </span>
+              <u> full-stack development (ReactJS)</u>
             </span>
+            .
           </p>
         </div>
       </div>
@@ -59,11 +68,12 @@ const Expertise = () => {
               <TechnicalAgileIcon />
             </div>
             <h3 className="mb-4 text-xl font-semibold text-gray-800">
-              Technical Agile Practices
+              Enterprise Agile Leadership
             </h3>
             <p className="leading-relaxed text-gray-600">
-              Proficient in Agile engineering practices, automated workflows and
-              scaled agility (SAFe).
+              Proven track record in implementing SAFe for 250+ people teams,
+              with expertise in large-scale transformations at companies like
+              Carrefour, RAS Interim and THALES.
             </p>
           </div>
         </motion.div>
@@ -81,11 +91,11 @@ const Expertise = () => {
               <ManagementIcon />
             </div>
             <h3 className="mb-4 text-xl font-semibold text-gray-800">
-              Management & Facilitation
+              Technical Innovation
             </h3>
             <p className="leading-relaxed text-gray-600">
-              Experienced in orchestrating Agile ceremonies and leading
-              organizational transformations.
+              Combining military-grade development experience from Thales with
+              cutting-edge AI integration in modern web applications at RENWU.
             </p>
           </div>
         </motion.div>
@@ -103,11 +113,12 @@ const Expertise = () => {
               <MetricsIcon />
             </div>
             <h3 className="mb-4 text-xl font-semibold text-gray-800">
-              Metrics-Driven
+              Strategic Growth
             </h3>
             <p className="leading-relaxed text-gray-600">
-              Data-driven approach to performance optimization using Agile
-              metrics and analytics.
+              Track record of scaling teams and processes up to 5x, while
+              maintaining efficiency through data-driven decision making and
+              automation.
             </p>
           </div>
         </motion.div>
