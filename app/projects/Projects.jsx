@@ -121,7 +121,7 @@ const Projects = forwardRef((props, ref) => {
                   onClick={(e) => e.stopPropagation()}
                   style={{
                     marginTop: "-10px",
-                    maxHeight: "calc(100vh - 60px)",
+                    maxHeight: "calc(100vh - 70px)",
                   }} // Ensure modal doesn't exceed viewport height
                 >
                   <div className="max-h-[calc(100vh-60px)] overflow-y-auto">
