@@ -57,8 +57,8 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="space-y-4"
           >
-            <h1 className="mb-2 text-4xl font-bold text-gray-800 font-rubik">
-              Agile Coach <span className="text-gray-600">&</span>
+            <h1 className="mb-2 text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl font-rubik">
+              Agile Coach <span className="text-gray-600">,</span>
               <br />
               Fullstack Developer
             </h1>
