@@ -34,7 +34,6 @@ const Hero = ({ aboutRef }) => {
     setModalOpen((prev) => !prev);
   };
 
-
   return (
     <div className="w-[100vw] justify-center items-center rounded-b-[50px] h-[90vh] md:h-[90vh] lg:h-[92.2vh] overflow-hidden bg-[#f6f6f6] md:max-h-[900px] lg:max-h-[900px]">
       <motion.div
@@ -46,10 +45,10 @@ const Hero = ({ aboutRef }) => {
         <p className="text-[#438fff] font-square-peg text-[calc(1.5rem+1vw)] max-sm:text-[calc(1.5rem+0.5vw)]">
           Mastering agility, optimizing efficiency
         </p>
-        <h1 className="font-rubik text-3xl md:text-[calc(1.1rem+3.9vw)] lg:text-[calc(1.1rem+3.9vw)] font-[600] leading-tight z-50">
-          Harnessing Agility for
+        <h1 className="font-rubik text-3xl md:text-[calc(1rem+3vw)] lg:text-[calc(1rem+3vw)] font-[600] leading-tight z-50">
+          Expert in Agile Transformations
           <br />
-          Efficient Product Delivery
+          and Full-Stack Development
         </h1>
         {/* Apply gradient and shadow styles after initial render */}
         <style jsx>{`
@@ -67,7 +66,12 @@ const Hero = ({ aboutRef }) => {
           }
         `}</style>
         <div className="flex flex-col justify-center items-center font-rubik text-xl text-[#000e23] font-[350] pt-3 tracking-wide">
-          <p>Hi! I&apos;m Anthony, an efficiency virtuoso.</p>
+          <p className="px-4">
+            Transforming organizations through agile methodologies and technical
+            expertise. <br />
+            Specializing in large-scale agile transformations and full-stack
+            development.
+          </p>
           <div className="flex flex-row justify-around gap-3 mt-7">
             <div
               className="from-[#448ffe] to-[#1f7bff] font-normal text-white justify-center items-center rounded-xl px-4 pb-1 pt-[.3rem] text-sm min-w-[120px] h-11 hover:cursor-pointer bg-gradient-to-b shadow-md font-rubik flex flex-row"
