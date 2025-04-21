@@ -120,7 +120,7 @@ const Projects = forwardRef((props, ref) => {
                   className="relative w-full max-w-4xl mx-4 my-4 overflow-hidden bg-white shadow-2xl md:mt-20 lg:mt-20 rounded-xl"
                   onClick={(e) => e.stopPropagation()}
                   style={{
-                    marginTop: "0px",
+                    marginTop: "-10px",
                     maxHeight: "calc(100vh - 60px)",
                   }} // Ensure modal doesn't exceed viewport height
                 >
