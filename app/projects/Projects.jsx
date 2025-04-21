@@ -228,7 +228,8 @@ const Projects = forwardRef((props, ref) => {
                           )}
                         </div>
 
-                        <div className="pt-6 mt-6 border-t border-gray-100">
+                        {/* Role and Duration */}
+                        <div className="pt-6 pr-4 mt-6 border-t border-gray-100">
                           <div className="flex items-center justify-between">
                             <div className="space-y-1">
                               <h3 className="text-sm font-semibold text-gray-700">
@@ -258,11 +259,10 @@ const Projects = forwardRef((props, ref) => {
                       e.stopPropagation();
                       setSelectedProject(null);
                     }}
-                    className="absolute z-50 p-2 text-gray-600 transition-colors bg-white rounded-full shadow-md hover:text-gray-900 top-6 right-6 hover:shadow-lg"
+                    className="absolute z-50 p-2 text-gray-600 transition-colors bg-white rounded-full shadow-md cursor-pointer hover:text-gray-900 top-6 right-6 hover:shadow-lg"
                     aria-label="Close details"
                     whileHover={{
-                      scale: 1.1,
-                      cursor: "pointer",
+                      scale: 1.05,
                     }}
                   >
                     <svg
