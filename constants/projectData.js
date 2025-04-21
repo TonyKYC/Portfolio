@@ -10,8 +10,11 @@ import epitechLogo from "/app/assets/covers/epitech-cover.png";
 
 const projects = [
   {
-    name: "Founder & Fullstack Developer | RENWU",
+    name: "Founder & Fullstack Developer",
+    company: "RENWU",
     year: "2025 - Present",
+    details:
+      "World's first autonomous AI-powered platform for project management.",
     description:
       "World's first autonomous AI-powered platform for project management.",
     image: renwuLogo,
@@ -38,8 +41,11 @@ const projects = [
     ],
   },
   {
-    name: "Agile Coach | Carrefour France",
+    name: "Agile Coach",
+    company: "Carrefour",
     year: "2023 - 2024",
+    details:
+      "Scrum, Kanban and SAFe • RTE for 6 ARTs • Jira Admin • Coaching newcomers to agility.",
     description:
       "Scrum, Kanban and SAFe • RTE for 6 ARTs • Jira Admin • Coaching newcomers to agility.",
     image: carrefourLogo,
@@ -59,8 +65,11 @@ const projects = [
     ],
   },
   {
-    name: "Agile Coach | RAS Interim",
+    name: "Agile Coach",
+    company: "RAS Interim",
     year: "2022 - 2023",
+    details:
+      "Implemented agility (Scrum, Kanban) within 2 companies simultaneously over a joint project.",
     description:
       "Implemented agility (Scrum, Kanban) within 2 companies simultaneously over a joint project.",
     image: rasLogo,
@@ -80,8 +89,11 @@ const projects = [
     ],
   },
   {
-    name: "Agile Coach | ZoL",
+    name: "Agile Coach",
+    company: "ZoL",
     year: "2022 - 2023",
+    details:
+      "Implemented agility (Scrum, Kanban) within 2 companies simultaneously over a joint project.",
     description:
       "Implemented agility (Scrum, Kanban) within 2 companies simultaneously over a joint project.",
     image: zolLogo,
@@ -101,8 +113,11 @@ const projects = [
     ],
   },
   {
-    name: "Scrum Master | Vivlio",
+    name: "Scrum Master",
+    company: "Vivlio",
     year: "2021 - 2022",
+    details:
+      "Implemented agility across the entire IT department within multicultural teams.",
     description:
       "Implemented agility across the entire IT department within multicultural teams.",
     image: vivlioLogo,
@@ -122,8 +137,10 @@ const projects = [
     ],
   },
   {
-    name: "Software Engineer | THALES LAS",
+    name: "Software Engineer",
+    company: "THALES",
     year: "2019 - 2021",
+    details: "Developed state-of-the-art software used for military purposes.",
     description:
       "Developed state-of-the-art software used for military purposes.",
     image: thalesLogo,
@@ -149,8 +166,11 @@ const projects = [
   },
 
   {
-    name: "Computing & Entrepreneurship | University of Kent",
+    name: "Computing & Entrepreneurship",
+    company: "University of Kent",
     year: "2017 - 2018",
+    details:
+      "Top European University for Entrepreneurship and Computer Science",
     description:
       "Top European University for Entrepreneurship and Computer Science",
     image: kentLogo,
@@ -172,8 +192,10 @@ const projects = [
     ],
   },
   {
-    name: "Digital Transformation & Consulting | HEC Paris",
+    name: "Digital Transformation & Consulting",
+    company: "HEC Paris",
     year: "2017",
+    details: "World best university for Management",
     description: "World best university for Management",
     image: hecLogo,
     imageAlt: "HEC Paris logo",
@@ -190,8 +212,10 @@ const projects = [
     ],
   },
   {
-    name: "Master Computer Science | EPITECH",
+    name: "Master Computer Science",
+    company: "EPITECH",
     year: "2015 - 2019",
+    details: "Best European University of Software Engineering and Technology",
     description:
       "Best European University of Software Engineering and Technology",
     image: epitechLogo,
