@@ -44,7 +44,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
             <img
               src="/assets/me.jpeg"
               alt="Profile"
-              className="object-cover w-full h-full transition-transform duration-300 max-h-[550px] hover:scale-105"
+              className="object-cover w-full h-full transition-transform duration-300 md:max-h-[500px] lg:max-h-[600px] hover:scale-105"
               style={{ aspectRatio: "3/4" }}
             />
           </div>
@@ -64,6 +64,7 @@ const AboutMe = forwardRef(({ contactRef }, ref) => {
             </h1>
             <div className="w-20 h-1 mb-6 bg-blue-600 rounded-full"></div>
             <SelfIntroduction />
+            <Skills />
             <Keywords />
           </motion.div>
 
@@ -118,7 +119,7 @@ export default AboutMe;
 
 const SelfIntroduction = () => {
   return (
-    <div className="space-y-4 text-lg leading-relaxed text-gray-600">
+    <div className="space-y-2 text-lg leading-relaxed text-gray-600">
       <p>
         Agile Coach and Project/Product Manager with 6+ years of experience
         driving team efficiency and product delivery. Combines strategic
@@ -137,7 +138,7 @@ const SelfIntroduction = () => {
 
 const Keywords = () => {
   return (
-    <div className="flex flex-wrap gap-1.5 pt-2">
+    <div className="flex flex-wrap gap-1.5 pt-0">
       {keywords.map((keyword, index) => (
         <span
           key={index}
@@ -149,6 +150,33 @@ const Keywords = () => {
     </div>
   );
 };
+const Skills = () => {
+  return (
+    <div className="flex flex-wrap gap-1.5 pt-0">
+      {skills.map((skill, index) => (
+        <span
+          key={index}
+          className="px-2 py-0.5 text-xs text-purple-800 bg-purple-100 rounded-full"
+        >
+          {skill}
+        </span>
+      ))}
+    </div>
+  );
+};
+
+const skills = [
+  "Agile Transformation",
+  "React Development",
+  "Team Leadership",
+  "Process Optimization",
+  "Technical Architecture",
+  "AI Integration",
+  "Product Strategy",
+  "Scrum & Kanban",
+  "Web Development",
+  "Project Management",
+];
 
 const keywords = [
   "React",
@@ -160,16 +188,6 @@ const keywords = [
   "Supabase",
   "PostgresSQL",
   "Vercel",
-  "AI",
-  "Agile Coaching",
-  "Agile Transformation",
-  "Scrum",
-  "Kanban",
-  "SAFe",
-  "Jira",
-  "Confluence",
-  "Miro",
   "CI/CD",
   "Documentation",
-  "Scalability",
 ];

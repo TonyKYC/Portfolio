@@ -45,7 +45,7 @@ const Expertise = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-2 lg:grid-cols-3">
         <motion.div
           custom={0}
           variants={cardVariants}
