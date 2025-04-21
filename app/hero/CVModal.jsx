@@ -20,7 +20,7 @@ const CVModal = ({ isOpen, onClose }) => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
-        className="w-full mt-14 max-w-[70vw] h-[90vh] p-6 bg-white rounded-lg shadow-lg"
+        className="w-[95vw] md:w-full mt-4 md:mt-14 max-w-[90vw] md:max-w-[70vw] h-[95vh] md:h-[90vh] p-3 md:p-6 bg-white rounded-lg shadow-lg"
       >
         <div
           typeof="button"
@@ -42,7 +42,9 @@ const CVModal = ({ isOpen, onClose }) => {
             />
           </svg>
         </div>
-        <h2 className="mb-4 text-2xl font-bold">Curriculum Vitae</h2>
+        <h2 className="mb-2 text-xl font-bold md:mb-4 md:text-2xl">
+          Curriculum Vitae
+        </h2>
         <iframe
           src="/assets/cv/CV_ANTHONY_ABRAMO_2025_TW.pdf"
           className="w-full h-[90%] border-0"
