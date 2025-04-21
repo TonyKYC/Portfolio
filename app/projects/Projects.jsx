@@ -6,7 +6,7 @@ import projects from "../../constants/projectData";
 const getProjectBackground = (projectName) => {
   // Map project names to their brand colors
   const colorMap = {
-    RENWU: "bg-[#1e1f22]",
+    Renwu: "bg-[#1e1f22]",
     Carrefour: "bg-[#254f9b]",
     "RAS Interim": "bg-[#ff914d]",
     ZoL: "bg-[#2aabf6]",
@@ -99,9 +99,7 @@ const Projects = forwardRef((props, ref) => {
                   <h3 className="text-lg font-semibold">{project?.name}</h3>
                   <p className="text-sm text-gray-500">{project?.year}</p>
                 </div>
-                <p className="mt-2 text-sm text-gray-600">
-                  {project?.description}
-                </p>
+                <p className="mt-2 text-sm text-gray-600">{project?.title}</p>
               </motion.div>
             </motion.div>
           ))}
@@ -131,7 +129,7 @@ const Projects = forwardRef((props, ref) => {
                       {/* Left Column - Image and Basic Info */}
                       <div
                         className={`h-[200px] md:h-full md:min-h-[300px] flex items-center justify-center ${getProjectBackground(
-                          selectedProject.company
+                          selectedProject?.company
                         )}`}
                       >
                         <motion.div
@@ -144,8 +142,8 @@ const Projects = forwardRef((props, ref) => {
                             layoutId={`card-image-${projects.indexOf(
                               selectedProject
                             )}`}
-                            src={selectedProject.image}
-                            alt={selectedProject.imageAlt}
+                            src={selectedProject?.image}
+                            alt={selectedProject?.imageAlt}
                             className="object-contain w-full h-full"
                           />
                         </motion.div>
@@ -156,15 +154,21 @@ const Projects = forwardRef((props, ref) => {
                         <div className="flex items-center justify-between mb-4">
                           <div>
                             <h2 className="text-2xl font-bold">
-                              {selectedProject.name}
+                              {selectedProject?.name}
                             </h2>
                             <div className="flex items-center gap-2 mt-1">
                               <span className="px-2 py-1 text-xs bg-gray-100 rounded-full">
-                                {selectedProject.year}
+                                {selectedProject?.year}
                               </span>
-                              {selectedProject.status && (
-                                <span className="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full">
-                                  {selectedProject.status}
+                              {selectedProject?.status && (
+                                <span
+                                  className={`px-2 py-1 text-xs rounded-full ${
+                                    selectedProject.status === "In Development"
+                                      ? "text-purple-800 bg-purple-100"
+                                      : "text-green-800 bg-green-100"
+                                  }`}
+                                >
+                                  {selectedProject?.status}
                                 </span>
                               )}
                             </div>
@@ -172,13 +176,13 @@ const Projects = forwardRef((props, ref) => {
                         </div>
 
                         <div className="flex-grow space-y-6">
-                          {selectedProject.technologies && (
+                          {selectedProject?.technologies && (
                             <div>
                               <h3 className="mb-2 text-sm font-semibold text-gray-700">
                                 Technologies
                               </h3>
                               <div className="flex flex-wrap gap-1.5">
-                                {selectedProject.technologies.map(
+                                {selectedProject?.technologies.map(
                                   (tech, index) => (
                                     <span
                                       key={index}
@@ -197,28 +201,28 @@ const Projects = forwardRef((props, ref) => {
                               Project Details
                             </h3>
                             <p className="text-sm text-gray-600">
-                              {selectedProject.details}
+                              {selectedProject?.details}
                             </p>
                           </div>
 
-                          {selectedProject.challenges && (
+                          {selectedProject?.challenges && (
                             <div>
                               <h3 className="mb-2 text-sm font-semibold text-gray-700">
                                 Challenges
                               </h3>
                               <p className="text-sm text-gray-600">
-                                {selectedProject.challenges}
+                                {selectedProject?.challenges}
                               </p>
                             </div>
                           )}
 
-                          {selectedProject.achievements && (
+                          {selectedProject?.achievements && (
                             <div>
                               <h3 className="mb-2 text-sm font-semibold text-gray-700">
                                 Achievements
                               </h3>
                               <ul className="text-sm text-gray-600 list-disc list-inside">
-                                {selectedProject.achievements.map(
+                                {selectedProject?.achievements.map(
                                   (achievement, index) => (
                                     <li key={index}>{achievement}</li>
                                   )
@@ -236,7 +240,7 @@ const Projects = forwardRef((props, ref) => {
                                 Role
                               </h3>
                               <p className="text-sm text-gray-600">
-                                {selectedProject.role}
+                                {selectedProject?.role}
                               </p>
                             </div>
                             <div className="space-y-1">
@@ -244,7 +248,7 @@ const Projects = forwardRef((props, ref) => {
                                 Duration
                               </h3>
                               <p className="text-sm text-gray-600">
-                                {selectedProject.duration}
+                                {selectedProject?.duration}
                               </p>
                             </div>
                           </div>

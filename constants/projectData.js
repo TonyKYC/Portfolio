@@ -9,28 +9,30 @@ import hecLogo from "/app/assets/covers/hec-cover.png";
 import epitechLogo from "/app/assets/covers/epitech-cover.png";
 
 const projects = [
+  // Renwu
   {
     name: "Founder & Fullstack Developer",
-    company: "RENWU",
+    company: "Renwu",
     year: "2025 - Present",
-    details:
-      "World's first autonomous AI-powered platform for project management.",
-    description:
-      "World's first autonomous AI-powered platform for project management.",
+    title: "Autonomous AI-powered platform for project management.",
     image: renwuLogo,
     imageAlt: "Renwu logo",
-    longDescription:
-      "Leading the development of an innovative AI-powered project management platform, focusing on autonomous decision-making and workflow optimization.",
-    status: "In Progress",
+    details:
+      "Spearheading the development of RENWU, an innovative platform that leverages advanced AI algorithms to automate project management workflows. The platform focuses on intelligent task allocation, predictive analytics, and autonomous decision-making to optimize project delivery and team efficiency.",
+    status: "In Development",
     challenges:
-      "Building a complex AI system that can understand and manage project workflows autonomously while maintaining user trust and system reliability.",
+      "Developing sophisticated AI algorithms that can accurately interpret project complexities and make reliable decisions, while ensuring seamless integration with existing project management methodologies and maintaining high standards of data security.",
     technologies: [
       "React",
       "Next.js",
       "TypeScript",
-      "AI/ML",
-      "Python",
-      "Node.js",
+      "TailwindCSS",
+      "Zod",
+      "ShadcnUI",
+      "Supabase",
+      "PostgresSQL",
+      "Vercel",
+      "AI",
     ],
     role: "Founder & Technical Lead",
     duration: "Ongoing",
@@ -40,22 +42,33 @@ const projects = [
       "Leading product strategy and development",
     ],
   },
+  // Carrefour
   {
     name: "Agile Coach",
     company: "Carrefour",
     year: "2023 - 2024",
-    details:
-      "Scrum, Kanban and SAFe • RTE for 6 ARTs • Jira Admin • Coaching newcomers to agility.",
-    description:
-      "Scrum, Kanban and SAFe • RTE for 6 ARTs • Jira Admin • Coaching newcomers to agility.",
+    title:
+      "Scrum, Kanban and SAFe • RTE for 6a ARTs • Jira Admin • Coaching newcomers to agility.",
     image: carrefourLogo,
     imageAlt: "Carrefour logo",
-    longDescription:
-      "Implemented scaled agility using the SAFe framework across 20 teams (250 people) with the help of an agile community composed of 5 Scrum Masters, 1 RTE and a organizational coach.",
+    details:
+      "Led a comprehensive agile transformation initiative at Carrefour, orchestrating the implementation of SAFe framework across 20 teams comprising 250 people. Established and mentored an agile community of practice, including 5 Scrum Masters and 1 RTE, while providing strategic guidance for organizational change management and process optimization.",
     status: "Completed",
     challenges:
-      "Coordinating large-scale agile transformation across multiple teams while maintaining productivity and team morale.",
-    technologies: ["SAFe", "Scrum", "Kanban", "Jira", "Confluence"],
+      "Orchestrating a large-scale agile transformation across diverse business units while maintaining operational efficiency, managing cultural change resistance, and ensuring consistent delivery quality across all teams.",
+    technologies: [
+      "SAFe",
+      "Scrum",
+      "Kanban",
+      "Jira",
+      "Confluence",
+      "Agile Coaching",
+      "Miro",
+      "CI/CD",
+      "Documentation",
+      "Scalability",
+      "Agile Transformation",
+    ],
     role: "Release Train Engineer (RTE) & Agile Coach",
     duration: "1 year",
     achievements: [
@@ -64,22 +77,32 @@ const projects = [
       "Led multiple teams in delivering complex engineering projects on time and within budget",
     ],
   },
+  // RAS Interim
   {
     name: "Agile Coach",
     company: "RAS Interim",
     year: "2022 - 2023",
-    details:
-      "Implemented agility (Scrum, Kanban) within 2 companies simultaneously over a joint project.",
-    description:
+    title:
       "Implemented agility (Scrum, Kanban) within 2 companies simultaneously over a joint project.",
     image: rasLogo,
     imageAlt: "RAS Interim",
-    longDescription:
-      "Successfully managed dual-company agile implementation, focusing on Product Management and development team efficiency.",
+    details:
+      "Orchestrated a unique dual-company agile transformation, implementing Scrum and Kanban methodologies across both organizations. Focused on optimizing Product Management processes and enhancing development team efficiency through standardized practices while maintaining each company's unique operational requirements.",
     status: "Completed",
     challenges:
-      "Coordinating agile practices across two different company cultures while maintaining alignment and productivity.",
-    technologies: ["Scrum", "Kanban", "Jira", "Agile Coaching"],
+      "Harmonizing different organizational cultures, aligning disparate business processes, and establishing unified agile practices while respecting each company's unique identity and requirements.",
+    technologies: [
+      "Scrum",
+      "Kanban",
+      "Jira",
+      "Confluence",
+      "Agile Coaching",
+      "Miro",
+      "CI/CD",
+      "Documentation",
+      "Scalability",
+      "Agile Transformation",
+    ],
     role: "Agile Coach",
     duration: "1 year",
     achievements: [
@@ -88,22 +111,30 @@ const projects = [
       "Successfully implemented cross-company agile practices",
     ],
   },
+  // ZoL
   {
     name: "Agile Coach",
     company: "ZoL",
     year: "2022 - 2023",
-    details:
-      "Implemented agility (Scrum, Kanban) within 2 companies simultaneously over a joint project.",
-    description:
+    title:
       "Implemented agility (Scrum, Kanban) within 2 companies simultaneously over a joint project.",
     image: zolLogo,
     imageAlt: "ZOL logo",
-    longDescription:
-      "Successfully managed dual-company agile implementation, focusing on Product Management and development team efficiency.",
+    details:
+      "Managed a complex agile transformation project involving simultaneous implementation across two partner companies. Established cross-functional teams, implemented standardized agile ceremonies, and developed metrics-driven performance tracking systems to ensure successful collaboration and delivery.",
     status: "Completed",
     challenges:
-      "Coordinating agile practices across two different company cultures while maintaining alignment and productivity.",
-    technologies: ["Scrum", "Kanban", "Jira", "Agile Coaching"],
+      "Navigating complex inter-company dynamics while implementing consistent agile practices, managing stakeholder expectations across organizations, and establishing effective cross-team communication channels.",
+    technologies: [
+      "Scrum",
+      "Kanban",
+      "Jira",
+      "Agile Coaching",
+      "CI/CD",
+      "Documentation",
+      "Scalability",
+      "Agile Transformation",
+    ],
     role: "Agile Coach",
     duration: "1 year",
     achievements: [
@@ -112,49 +143,64 @@ const projects = [
       "Successfully implemented cross-company agile practices",
     ],
   },
+  // Vivlio
   {
     name: "Scrum Master",
     company: "Vivlio",
     year: "2021 - 2022",
-    details:
-      "Implemented agility across the entire IT department within multicultural teams.",
-    description:
+    title:
       "Implemented agility across the entire IT department within multicultural teams.",
     image: vivlioLogo,
     imageAlt: "Vivlio logo",
-    longDescription:
-      "Led agile transformation across IT department, focusing on multicultural team integration and process improvement.",
+    details:
+      "Drove comprehensive agile transformation across Vivlio's IT department, focusing on integrating diverse multicultural teams. Implemented tailored agile practices that accommodated different working styles and time zones while establishing standardized processes for consistent delivery and collaboration. Developed scalable processes and infrastructure to support 5x company growth, including automated CI/CD pipelines, documentation standards, and team structure blueprints.",
     status: "Completed",
     challenges:
-      "Managing cultural differences and timezone challenges while maintaining team cohesion and productivity.",
-    technologies: ["Scrum", "Kanban", "Agile Coaching", "Jira"],
+      "Bridging cultural gaps and time zone differences while maintaining team cohesion, implementing standardized agile practices across diverse teams, and ensuring effective communication in a multicultural environment. Designing processes that would remain effective at 5x scale while maintaining agility.",
+    technologies: [
+      "Scrum",
+      "Kanban",
+      "Agile Coaching",
+      "Jira",
+      "Confluence",
+      "Miro",
+      "CI/CD",
+      "Documentation",
+      "Scalability",
+      "Agile Transformation",
+      "Multicultural Teams",
+    ],
     role: "Scrum Master",
     duration: "1 year",
     achievements: [
       "Implemented agility across entire IT department",
       "Improved on-time delivery and quality",
-      "Collaborated with Engineering Manager to create processes for scaling environment (x7)",
+      "Collaborated with Engineering Manager to create processes for scaling environment",
+      "Established scalable infrastructure and processes to support 5x growth",
+      "Created team structure templates and documentation standards for scale",
     ],
   },
+  // Thales
   {
     name: "Software Engineer",
     company: "THALES",
     year: "2019 - 2021",
-    details: "Developed state-of-the-art software used for military purposes.",
-    description:
-      "Developed state-of-the-art software used for military purposes.",
+    title: "Developed state-of-the-art software used for military purposes.",
     image: thalesLogo,
     imageAlt: "Thales logo",
-    longDescription:
-      "Combined software engineering with Scrum Master responsibilities, developing military-grade applications while ensuring agile practices.",
+    details:
+      "Led development of mission-critical military software applications while serving dual roles as Software Engineer and Scrum Master. Implemented secure development practices and agile methodologies within the constraints of military specifications, ensuring both innovation and compliance.",
     status: "Completed",
     challenges:
-      "Balancing security requirements with agile development practices in a military context.",
+      "Maintaining the delicate balance between agile development practices and stringent military security protocols, while ensuring high-quality deliverables that meet precise military specifications and security clearance requirements.",
     technologies: [
       "ReactJS",
       "Web Ecosystem",
       "Agile Methodologies",
       "Military-grade Security",
+      "Military-grade Testing",
+      "CI/CD",
+      "Documentation",
     ],
     role: "Software Engineer & Scrum Master",
     duration: "2 years",
@@ -164,24 +210,27 @@ const projects = [
       "Enhanced cross-functional team collaboration",
     ],
   },
-
+  // University of Kent
   {
     name: "Computing & Entrepreneurship",
     company: "University of Kent",
     year: "2017 - 2018",
-    details:
-      "Top European University for Entrepreneurship and Computer Science",
-    description:
-      "Top European University for Entrepreneurship and Computer Science",
+    title: "Top European University for Entrepreneurship and Computer Science",
     image: kentLogo,
     imageAlt: "University of Kent logo",
-    longDescription:
-      "Specialized in Business Development within IT industry, culminating in innovative thesis project.",
-    status: "Completed",
+    details:
+      "Pursued advanced studies in Computing and Entrepreneurship at a leading European institution, combining technical expertise with business acumen. Developed innovative solutions including a groundbreaking haptic glove system for sign language translation, demonstrating practical application of theoretical knowledge.",
+    status: "Graduated",
+    challenges:
+      "Balancing technical innovation with business viability while developing cutting-edge solutions in haptic technology, requiring deep understanding of both computer science principles, market dynamics and ethical considerations.",
     technologies: [
       "Business Development",
+      "Entrepreneurship",
+      "Accounting",
+      "Digital Marketing",
       "Computer Science",
       "Haptic Technology",
+      "Thesis",
     ],
     role: "Master's Student",
     duration: "1 year",
@@ -191,18 +240,25 @@ const projects = [
       "Combined technical and business expertise",
     ],
   },
+  // HEC Paris
   {
     name: "Digital Transformation & Consulting",
     company: "HEC Paris",
     year: "2017",
-    details: "World best university for Management",
-    description: "World best university for Management",
+    title: "World best university for Management",
     image: hecLogo,
     imageAlt: "HEC Paris logo",
-    longDescription:
-      "Specialized certification in Digital Transformation and Strategy from world-renowned management institution.",
-    status: "Completed",
-    technologies: ["Digital Strategy", "Business Transformation", "Management"],
+    details:
+      "Completed specialized certification in Digital Transformation and Strategy at HEC Paris along with eMBA program, one of the world's premier management institutions. Gained comprehensive understanding of digital business transformation, change management, and strategic innovation in the context of modern business challenges.",
+    status: "Graduated",
+    challenges:
+      "Mastering complex digital transformation frameworks and change management methodologies while developing practical strategies for real-world business applications in a rapidly evolving digital landscape.",
+    technologies: [
+      "Digital Strategy",
+      "Business Transformation",
+      "Management",
+      "eMBA",
+    ],
     role: "Certificate Student",
     duration: "1 year",
     achievements: [
@@ -211,20 +267,29 @@ const projects = [
       "Developed strategic thinking in digital context",
     ],
   },
+  // EPITECH
   {
     name: "Master Computer Science",
     company: "EPITECH",
     year: "2015 - 2019",
-    details: "Best European University of Software Engineering and Technology",
-    description:
-      "Best European University of Software Engineering and Technology",
+    title: "Best European University of Software Engineering and Technology",
     image: epitechLogo,
     imageAlt: "EPITECH logo",
-    longDescription:
-      "Completed comprehensive computer science education with specialization in C/C++ programming.",
-    status: "Completed",
-    technologies: ["C/C++", "Software Engineering", "Algorithm Design"],
-    role: "Student",
+    details:
+      "Completed an intensive Master's program in Computer Science with specialization in C/C++ programming at EPITECH, one of Europe's leading technical institutions. Engaged in practical, project-based learning that emphasized both theoretical foundations and real-world application of software engineering principles.",
+    status: "Graduated",
+    challenges:
+      "Mastering complex programming concepts and software engineering principles while managing intensive project-based coursework and developing practical solutions to real-world technical challenges.",
+    technologies: [
+      "C/C++",
+      "Software Engineering",
+      "Algorithm Design",
+      "Architecture",
+      "Design Patterns",
+      "CI/CD",
+      "Technical Documentation",
+    ],
+    role: "Master's Student",
     duration: "4 years",
     achievements: [
       "Specialized in C/C++ programming",
